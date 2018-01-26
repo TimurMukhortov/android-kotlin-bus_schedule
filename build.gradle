@@ -25,3 +25,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    supportLibrary = "27.0.2"
+    constraintLayout = "1.0.2"
+}
