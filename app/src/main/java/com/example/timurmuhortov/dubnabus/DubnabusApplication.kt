@@ -2,6 +2,7 @@ package com.example.timurmuhortov.dubnabus
 
 import android.app.Activity
 import android.app.Application
+import com.example.timurmuhortov.dubnabus.di.component.DaggerAppComponent
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject
@@ -27,6 +28,7 @@ class DubnabusApplication : Application(), HasActivityInjector {
                 .context(this)
                 .build()
                 .inject(this)
+
     }
 
     override fun activityInjector() = dispatchingActivityInjector

@@ -1,4 +1,4 @@
-package com.example.timurmuhortov.dubnabus.di.base
+package com.example.timurmuhortov.dubnabus.ui.base
 
 import android.content.Context
 import android.support.v4.app.Fragment
@@ -12,7 +12,7 @@ import dagger.android.support.AndroidSupportInjection
  **/
 
 
-class BaseFragment: Fragment() {
+abstract class BaseFragment: Fragment() {
 
     override fun onAttach(context: Context?) {
         AndroidSupportInjection.inject(this)

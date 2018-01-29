@@ -1,4 +1,4 @@
-package com.example.timurmuhortov.dubnabus.di.base
+package com.example.timurmuhortov.dubnabus.ui.base
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
