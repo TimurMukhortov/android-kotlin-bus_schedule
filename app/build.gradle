@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -42,5 +44,6 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:${rootProject.ext.dagger2}"
     kapt "com.google.dagger:dagger-android-processor:${rootProject.ext.dagger2}"
     kapt "com.google.dagger:dagger-compiler:${rootProject.ext.dagger2}"
+    kapt "com.google.dagger:dagger-android-support:${rootProject.ext.dagger2}"
 
 }
