@@ -1,11 +1,17 @@
 package com.example.timurmuhortov.dubnabus.ui.fragment
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import butterknife.ButterKnife
+import butterknife.OnClick
+import butterknife.Unbinder
 import com.example.timurmuhortov.dubnabus.R
+import com.example.timurmuhortov.dubnabus.presentation.view.IMainView
+import com.example.timurmuhortov.dubnabus.ui.base.BaseFragment
+import javax.inject.Inject
 
 /**
  * @author: timur.mukhortov
@@ -15,12 +21,44 @@ import com.example.timurmuhortov.dubnabus.R
  **/
 
 
-class MainFragment: Fragment() {
+class MainFragment : BaseFragment(), IMainView {
 
     companion object {
         fun newInstance() = MainFragment()
     }
 
+    private val mainTag = "MainFragment"
+
+    private lateinit var unbinder: Unbinder
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-            inflater.inflate(R.layout.activity_main, container, false)
+            inflater.inflate(R.layout.fragment_mainscreen, container, false)
+                    .also {
+                        unbinder = ButterKnife.bind(this@MainFragment, it)
+                    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        unbinder.unbind()
+    }
+
+    @OnClick(R.id.button_schedule)
+    protected fun onButtonSchedule() {
+        Log.i(mainTag, "Schedule!")
+        val b = "hello"
+
+    }
+
+    @OnClick(R.id.button_map)
+    protected fun onButtonMap() {
+        Log.i(mainTag, "Map!")
+        val b = "hello"
+    }
+
+    @OnClick(R.id.button_about)
+    protected fun onButtonAbout() {
+        Log.i(mainTag, "About!")
+        val b = "hello"
+    }
 }
