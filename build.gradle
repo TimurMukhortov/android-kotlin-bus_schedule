@@ -31,4 +31,5 @@ ext {
     constraintLayout = "1.0.2"
     dagger2 = "2.12"
     moxy = "1.5.3"
+    butterKnife = "8.8.1"
 }
