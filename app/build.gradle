@@ -56,4 +56,7 @@ dependencies {
     implementation "com.jakewharton:butterknife:${rootProject.ext.butterKnife}"
     kapt "com.jakewharton:butterknife-compiler:${rootProject.ext.butterKnife}"
 
+    //Cicerone
+    compile "ru.terrakok.cicerone:cicerone:${rootProject.ext.cicerone}"
+
 }
