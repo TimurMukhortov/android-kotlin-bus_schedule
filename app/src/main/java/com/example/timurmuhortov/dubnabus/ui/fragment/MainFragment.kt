@@ -11,7 +11,6 @@ import butterknife.Unbinder
 import com.example.timurmuhortov.dubnabus.R
 import com.example.timurmuhortov.dubnabus.presentation.view.IMainView
 import com.example.timurmuhortov.dubnabus.ui.base.BaseFragment
-import javax.inject.Inject
 
 /**
  * @author: timur.mukhortov
@@ -46,19 +45,16 @@ class MainFragment : BaseFragment(), IMainView {
     @OnClick(R.id.button_schedule)
     protected fun onButtonSchedule() {
         Log.i(mainTag, "Schedule!")
-        val b = "hello"
 
     }
 
     @OnClick(R.id.button_map)
     protected fun onButtonMap() {
         Log.i(mainTag, "Map!")
-        val b = "hello"
     }
 
     @OnClick(R.id.button_about)
     protected fun onButtonAbout() {
         Log.i(mainTag, "About!")
-        val b = "hello"
     }
 }
