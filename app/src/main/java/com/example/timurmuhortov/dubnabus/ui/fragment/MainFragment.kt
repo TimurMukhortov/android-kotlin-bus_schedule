@@ -44,6 +44,7 @@ class MainFragment : BaseFragment(), IMainView {
             inflater.inflate(R.layout.fragment_mainscreen, container, false)
                     .also {
                         unbinder = ButterKnife.bind(this@MainFragment, it)
+                        Log.i(mainTag, "Start Main Fragment!")
                     }
 
 

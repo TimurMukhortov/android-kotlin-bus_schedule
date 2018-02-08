@@ -4,6 +4,8 @@ import android.app.Activity
 import com.example.timurmuhortov.dubnabus.ui.activity.MainActivity
 import com.example.timurmuhortov.dubnabus.di.scope.ActivityScope
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
+import com.example.timurmuhortov.dubnabus.presentation.routing.MainRouting
+import com.example.timurmuhortov.dubnabus.presentation.routing.base.IRoutingBinder
 import com.example.timurmuhortov.dubnabus.ui.fragment.MainFragment
 import dagger.Binds
 import dagger.Module
@@ -22,6 +24,10 @@ abstract class MainActivityModule {
     @Binds
     @ActivityScope
     abstract fun activity(activity: MainActivity): Activity
+
+    @Binds
+    @ActivityScope
+    abstract fun routing(routing: MainRouting): IRoutingBinder
 
     @FragmentScope
     @ContributesAndroidInjector

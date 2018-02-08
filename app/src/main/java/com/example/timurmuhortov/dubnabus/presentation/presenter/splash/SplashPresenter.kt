@@ -5,6 +5,8 @@ import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
 import com.example.timurmuhortov.dubnabus.presentation.view.ISplashView
+import com.example.timurmuhortov.dubnabus.ui.viewholder.Screens
+import ru.terrakok.cicerone.Router
 import javax.inject.Inject
 
 /**
@@ -16,11 +18,14 @@ import javax.inject.Inject
 
 @FragmentScope
 @InjectViewState
-class SplashPresenter @Inject constructor(): MvpPresenter<ISplashView>() {
+class SplashPresenter @Inject constructor(
+        private val router: Router
+): MvpPresenter<ISplashView>() {
 
     private val splashTag = "SplashPresenter"
 
     fun onMain(){
         Log.i(splashTag, "P. Main!")
+        router.replaceScreen(Screens.MAIN)
     }
 }

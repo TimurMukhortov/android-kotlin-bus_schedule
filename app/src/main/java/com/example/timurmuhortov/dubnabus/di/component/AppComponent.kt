@@ -3,8 +3,10 @@ package com.example.timurmuhortov.dubnabus.di.component
 import android.content.Context
 import com.example.timurmuhortov.dubnabus.DubnabusApplication
 import com.example.timurmuhortov.dubnabus.di.module.AppModule
+import com.example.timurmuhortov.dubnabus.di.module.RouterModule
 import dagger.BindsInstance
 import dagger.Component
+import ru.terrakok.cicerone.Router
 import javax.inject.Singleton
 
 /**
@@ -15,9 +17,10 @@ import javax.inject.Singleton
  **/
 
 @Singleton
-@Component(modules = [(
-        AppModule::class
-        )])
+@Component(modules = arrayOf(
+        AppModule::class,
+        RouterModule::class
+))
 interface AppComponent {
 
     @Component.Builder
