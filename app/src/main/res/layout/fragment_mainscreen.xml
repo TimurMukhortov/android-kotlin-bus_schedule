@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,55 +14,69 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mainscreen_background" />
 
-    <ImageView
-        android:id="@+id/imageView_schedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/imageView_background"
-        app:layout_constraintTop_toTopOf="@+id/imageView_background"
-        app:srcCompat="@drawable/mainscreen_schedule" />
-
-    <ImageView
-        android:id="@+id/imageView_map"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/imageView_schedule"
-        app:layout_constraintTop_toTopOf="@+id/imageView_schedule"
-        app:srcCompat="@drawable/mainscreen_maplook" />
-
-    <ImageView
-        android:id="@+id/imageView_about"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/imageView_schedule"
-        app:layout_constraintTop_toTopOf="@+id/imageView_schedule"
-        app:srcCompat="@drawable/mainscreen_about" />
 
     <Button
         android:id="@+id/button_schedule"
         android:layout_width="150dp"
         android:layout_height="107dp"
-        android:background="@android:color/transparent"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="259dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="@string/schedule"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_down_border_for_buttons"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_central_divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_up_border_for_buttons" />
 
     <Button
         android:id="@+id/button_map"
         android:layout_width="150dp"
         android:layout_height="107dp"
-        android:background="@android:color/transparent"
-        tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="259dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="@string/map"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_down_border_for_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_central_divider"
+        app:layout_constraintTop_toTopOf="@+id/guideline_up_border_for_buttons" />
 
     <Button
         android:id="@+id/button_about"
         android:layout_width="110dp"
         android:layout_height="24dp"
-        android:background="@android:color/transparent"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="536dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="@string/about"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_up_border_for_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="250dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_down_border_for_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="387dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_central_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="192dp" />
 
 </android.support.constraint.ConstraintLayout>
