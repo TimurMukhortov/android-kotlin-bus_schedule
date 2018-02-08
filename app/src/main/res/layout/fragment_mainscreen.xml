@@ -14,6 +14,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mainscreen_background" />
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorOrange"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/DarkToolbar">
+
+        <TextView
+            android:id="@+id/text_toolbar_title"
+            style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxLines="3"
+            android:text="@string/toolbar_main" />
+
+    </android.support.v7.widget.Toolbar>
 
     <Button
         android:id="@+id/button_schedule"
@@ -28,7 +47,9 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline_down_border_for_buttons"
         app:layout_constraintEnd_toStartOf="@+id/guideline_central_divider"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline_up_border_for_buttons" />
+        app:layout_constraintTop_toTopOf="@+id/guideline_up_border_for_buttons"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="32dp" />
 
     <Button
         android:id="@+id/button_map"
@@ -43,7 +64,9 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline_down_border_for_buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guideline_central_divider"
-        app:layout_constraintTop_toTopOf="@+id/guideline_up_border_for_buttons" />
+        app:layout_constraintTop_toTopOf="@+id/guideline_up_border_for_buttons"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="16dp" />
 
     <Button
         android:id="@+id/button_about"
