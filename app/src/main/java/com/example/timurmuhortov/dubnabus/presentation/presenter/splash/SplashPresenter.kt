@@ -1,5 +1,6 @@
 package com.example.timurmuhortov.dubnabus.presentation.presenter.splash
 
+import android.os.Handler
 import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
@@ -7,7 +8,10 @@ import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
 import com.example.timurmuhortov.dubnabus.presentation.view.ISplashView
 import com.example.timurmuhortov.dubnabus.ui.viewholder.Screens
 import ru.terrakok.cicerone.Router
+import java.util.*
 import javax.inject.Inject
+import com.example.timurmuhortov.dubnabus.R.string.schedule
+
 
 /**
  * @author: timur.mukhortov
@@ -20,12 +24,15 @@ import javax.inject.Inject
 @InjectViewState
 class SplashPresenter @Inject constructor(
         private val router: Router
-): MvpPresenter<ISplashView>() {
+) : MvpPresenter<ISplashView>() {
 
     private val splashTag = "SplashPresenter"
+    private val handler = Handler()
 
-    fun onMain(){
+    fun onMain() {
         Log.i(splashTag, "P. Main!")
-        router.replaceScreen(Screens.MAIN)
+        handler.postDelayed({
+            router.replaceScreen(Screens.MAIN)
+        }, 2000)
     }
 }
