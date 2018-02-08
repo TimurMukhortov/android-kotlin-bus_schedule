@@ -8,9 +8,13 @@ import android.view.ViewGroup
 import butterknife.ButterKnife
 import butterknife.OnClick
 import butterknife.Unbinder
+import com.arellomobile.mvp.presenter.InjectPresenter
+import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.timurmuhortov.dubnabus.R
+import com.example.timurmuhortov.dubnabus.presentation.presenter.main.MainPresenter
 import com.example.timurmuhortov.dubnabus.presentation.view.IMainView
 import com.example.timurmuhortov.dubnabus.ui.base.BaseFragment
+import javax.inject.Inject
 
 /**
  * @author: timur.mukhortov
@@ -22,11 +26,17 @@ import com.example.timurmuhortov.dubnabus.ui.base.BaseFragment
 
 class MainFragment : BaseFragment(), IMainView {
 
+    private val mainTag = "MainFragment"
+
     companion object {
         fun newInstance() = MainFragment()
     }
 
-    private val mainTag = "MainFragment"
+    @Inject
+    @InjectPresenter
+    lateinit var presenter: MainPresenter
+    @ProvidePresenter
+    fun providePresenter() = presenter
 
     private lateinit var unbinder: Unbinder
 
@@ -45,16 +55,18 @@ class MainFragment : BaseFragment(), IMainView {
     @OnClick(R.id.button_schedule)
     protected fun onButtonSchedule() {
         Log.i(mainTag, "Schedule!")
-
+        presenter.onSchedule()
     }
 
     @OnClick(R.id.button_map)
     protected fun onButtonMap() {
         Log.i(mainTag, "Map!")
+        presenter.onMap()
     }
 
     @OnClick(R.id.button_about)
     protected fun onButtonAbout() {
         Log.i(mainTag, "About!")
+        presenter.onAbout()
     }
 }
