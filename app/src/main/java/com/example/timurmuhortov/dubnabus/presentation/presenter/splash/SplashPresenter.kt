@@ -8,9 +8,7 @@ import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
 import com.example.timurmuhortov.dubnabus.presentation.view.ISplashView
 import com.example.timurmuhortov.dubnabus.ui.viewholder.Screens
 import ru.terrakok.cicerone.Router
-import java.util.*
 import javax.inject.Inject
-import com.example.timurmuhortov.dubnabus.R.string.schedule
 
 
 /**

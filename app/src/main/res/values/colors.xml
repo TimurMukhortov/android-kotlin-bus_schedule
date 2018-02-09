@@ -6,6 +6,7 @@
     <color name="colorDarkOrange">#a35b1a</color>
     <color name="colorOrange">#ef842b</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="colorTransparent">#10000000</color>
 
 
     <!--Black-->

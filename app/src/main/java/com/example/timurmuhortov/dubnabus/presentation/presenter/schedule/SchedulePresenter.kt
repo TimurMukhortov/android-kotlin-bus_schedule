@@ -19,4 +19,8 @@ import javax.inject.Inject
 class SchedulePresenter @Inject constructor(
 
 ) : MvpPresenter<IScheduleView>() {
+
+    fun onBack(){
+
+    }
 }
