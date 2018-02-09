@@ -14,4 +14,5 @@ object Screens {
      * Screens in the MainActivity
      */
     const val MAIN = "MainFragment"
+    const val SCHEDULE = "ScheduleFragment"
 }

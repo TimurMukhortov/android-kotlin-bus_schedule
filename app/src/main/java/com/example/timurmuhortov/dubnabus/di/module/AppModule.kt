@@ -2,8 +2,10 @@ package com.example.timurmuhortov.dubnabus.di.module
 
 import com.example.timurmuhortov.dubnabus.ui.activity.MainActivity
 import com.example.timurmuhortov.dubnabus.di.module.main.MainActivityModule
+import com.example.timurmuhortov.dubnabus.di.module.schedule.ScheduleActivityModule
 import com.example.timurmuhortov.dubnabus.di.module.splash.SplashActivityModule
 import com.example.timurmuhortov.dubnabus.di.scope.ActivityScope
+import com.example.timurmuhortov.dubnabus.ui.activity.ScheduleActivity
 import com.example.timurmuhortov.dubnabus.ui.activity.SplashActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -26,5 +28,9 @@ abstract class AppModule {
     @ActivityScope
     @ContributesAndroidInjector(modules = [(MainActivityModule::class)])
     abstract fun mainActivityInjector(): MainActivity
+
+    @ActivityScope
+    @ContributesAndroidInjector(modules = [(ScheduleActivityModule::class)])
+    abstract fun scheduleActivityInjector(): ScheduleActivity
 
 }
