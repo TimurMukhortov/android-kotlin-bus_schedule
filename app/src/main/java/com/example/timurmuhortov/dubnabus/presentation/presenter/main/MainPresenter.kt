@@ -5,6 +5,8 @@ import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
 import com.example.timurmuhortov.dubnabus.presentation.view.IMainView
+import com.example.timurmuhortov.dubnabus.ui.viewholder.Screens
+import ru.terrakok.cicerone.Router
 import javax.inject.Inject
 
 /**
@@ -16,10 +18,12 @@ import javax.inject.Inject
 
 @FragmentScope
 @InjectViewState
-class MainPresenter @Inject constructor(): MvpPresenter<IMainView>() {
+class MainPresenter @Inject constructor(
+        private val router: Router
+): MvpPresenter<IMainView>() {
 
     fun onSchedule(){
-        viewState.createAlertDialog("Ошибка:", "Раздел находится в разработке.")
+        router.navigateTo(Screens.SCHEDULE)
     }
 
     fun onMap(){

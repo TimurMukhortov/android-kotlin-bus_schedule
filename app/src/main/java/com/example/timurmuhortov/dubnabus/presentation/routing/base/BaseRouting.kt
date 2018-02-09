@@ -77,4 +77,11 @@ abstract class BaseRouting<out T: AppCompatActivity>(
     protected fun popFragmentBack() =
             (fragmentManager.fragments.size > 0).also { fragmentManager.popBackStack() }
 
+    protected fun popBack(): Boolean {
+        return if (fragmentManager.backStackEntryCount > 0) {
+            fragmentManager.popBackStack()
+            true
+        } else false
+    }
+
 }
