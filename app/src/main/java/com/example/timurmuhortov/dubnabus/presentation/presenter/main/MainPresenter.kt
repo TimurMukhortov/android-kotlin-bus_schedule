@@ -18,21 +18,16 @@ import javax.inject.Inject
 @InjectViewState
 class MainPresenter @Inject constructor(): MvpPresenter<IMainView>() {
 
-    private val mainTag = "MainPresenter"
-
     fun onSchedule(){
         viewState.createAlertDialog("Ошибка:", "Раздел находится в разработке.")
-        Log.i(mainTag, "P. Schedule!")
     }
 
     fun onMap(){
         viewState.createAlertDialog("Ошибка:", "Раздел находится в разработке.")
-        Log.i(mainTag, "P. Map!")
     }
 
     fun onAbout(){
         viewState.createAlertDialog("Ошибка:", "Раздел находится в разработке.")
-        Log.i(mainTag, "P. About!")
     }
 
 }

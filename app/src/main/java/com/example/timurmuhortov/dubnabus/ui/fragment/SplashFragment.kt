@@ -1,7 +1,6 @@
 package com.example.timurmuhortov.dubnabus.ui.fragment
 
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -41,7 +40,7 @@ class SplashFragment : BaseFragment(), ISplashView {
     private lateinit var unbinder: Unbinder
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-            inflater.inflate(R.layout.fragment_splashscreen, container, false)
+            inflater.inflate(R.layout.fragment_splash, container, false)
                     .also {
                         unbinder = ButterKnife.bind(this@SplashFragment, it)
                         init()

@@ -6,4 +6,8 @@
     <color name="colorDarkOrange">#a35b1a</color>
     <color name="colorOrange">#ef842b</color>
     <color name="colorWhite">#ffffff</color>
+
+
+    <!--Black-->
+    <color name="colorBlack_60per">#99000000</color>
 </resources>

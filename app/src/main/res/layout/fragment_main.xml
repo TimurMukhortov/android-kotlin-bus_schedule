@@ -9,30 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mainscreen_background" />
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorOrange"
-        app:layout_constraintTop_toTopOf="parent"
-        app:theme="@style/DarkToolbar">
+    <include
+        layout="@layout/partial_toolbar"
+    />
 
-        <TextView
-            android:id="@+id/text_toolbar_title"
-            style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:maxLines="3"
-            android:text="@string/toolbar_main"
-            android:textColor="@color/colorWhite" />
-
-    </android.support.v7.widget.Toolbar>
 
     <Button
         android:id="@+id/button_schedule"
