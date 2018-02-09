@@ -2,6 +2,8 @@ package com.example.timurmuhortov.dubnabus.presentation.routing
 
 import com.example.timurmuhortov.dubnabus.presentation.routing.base.BaseRouting
 import com.example.timurmuhortov.dubnabus.ui.activity.MainActivity
+import com.example.timurmuhortov.dubnabus.ui.activity.ScheduleActivity
+import com.example.timurmuhortov.dubnabus.ui.viewholder.Screens
 import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.commands.Command
 import ru.terrakok.cicerone.commands.Forward
@@ -23,6 +25,7 @@ class MainRouting @Inject constructor(
     override fun recognizeCommand(command: Command) {
         when (command) {
             is Forward -> when (command.screenKey) {
+                Screens.SCHEDULE -> openActivity(ScheduleActivity.newIntent(activity))
             }
         }
     }

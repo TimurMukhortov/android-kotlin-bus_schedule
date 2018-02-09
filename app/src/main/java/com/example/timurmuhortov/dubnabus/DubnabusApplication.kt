@@ -27,6 +27,8 @@ class DubnabusApplication : Application(), HasActivityInjector {
     override fun onCreate() {
         super.onCreate()
 
+        instance = this
+
         DaggerAppComponent
                 .builder()
                 .context(this)
