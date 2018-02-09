@@ -1,5 +1,6 @@
 package com.example.timurmuhortov.dubnabus.ui.fragment
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -25,19 +26,18 @@ import javax.inject.Inject
 
 
 class MainFragment : BaseFragment(), IMainView {
-
     private val mainTag = "MainFragment"
 
     companion object {
+
         fun newInstance() = MainFragment()
     }
-
     @Inject
     @InjectPresenter
     lateinit var presenter: MainPresenter
+
     @ProvidePresenter
     fun providePresenter() = presenter
-
     private lateinit var unbinder: Unbinder
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
@@ -47,11 +47,18 @@ class MainFragment : BaseFragment(), IMainView {
                         Log.i(mainTag, "Start Main Fragment!")
                     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         unbinder.unbind()
     }
+
+
+    override fun createAlertDialog(title: String, msg: String) = AlertDialog.Builder(context)
+            .setTitle(title)
+            .setMessage(msg)
+            .setPositiveButton("OK", {button,_  -> button.dismiss()})
+            .create()
+            .show()
 
     @OnClick(R.id.button_schedule)
     protected fun onButtonSchedule() {
