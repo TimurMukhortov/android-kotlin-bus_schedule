@@ -2,6 +2,6 @@
     <string name="app_name">dubnabus</string>
     <string name="schedule">SCHEDULE</string>
     <string name="map">MAP</string>
-    <string name="about">ABOUT APP</string>
+    <string name="about">О приложении</string>
     <string name="toolbar_main">РАСПИСАНИЕ АВТОБУСОВ \n г. Дубна</string>
 </resources>
