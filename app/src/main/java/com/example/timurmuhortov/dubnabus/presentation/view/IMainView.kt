@@ -14,4 +14,5 @@ import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface IMainView : MvpView {
 
+    fun createAlertDialog(title: String, msg: String)
 }
