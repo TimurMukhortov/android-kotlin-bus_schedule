@@ -2,16 +2,18 @@ package com.example.timurmuhortov.dubnabus.ui.fragment
 
 import android.app.AlertDialog
 import android.os.Bundle
-import android.util.Log
+import android.support.v7.widget.Toolbar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import butterknife.Unbinder
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.timurmuhortov.dubnabus.R
+import com.example.timurmuhortov.dubnabus.extension.setCenterTitle
 import com.example.timurmuhortov.dubnabus.presentation.presenter.main.MainPresenter
 import com.example.timurmuhortov.dubnabus.presentation.view.IMainView
 import com.example.timurmuhortov.dubnabus.ui.base.BaseFragment
@@ -26,7 +28,6 @@ import javax.inject.Inject
 
 
 class MainFragment : BaseFragment(), IMainView {
-    private val mainTag = "MainFragment"
 
     companion object {
 
@@ -36,15 +37,18 @@ class MainFragment : BaseFragment(), IMainView {
     @InjectPresenter
     lateinit var presenter: MainPresenter
 
+    @BindView(R.id.toolbar)
+    protected lateinit var toolbar: Toolbar
+
     @ProvidePresenter
     fun providePresenter() = presenter
     private lateinit var unbinder: Unbinder
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-            inflater.inflate(R.layout.fragment_mainscreen, container, false)
+            inflater.inflate(R.layout.fragment_main, container, false)
                     .also {
                         unbinder = ButterKnife.bind(this@MainFragment, it)
-                        Log.i(mainTag, "Start Main Fragment!")
+                        toolbar.setCenterTitle("РАСПИСАНИЕ АВТОБУСОВ \n г. Дубна")
                     }
 
     override fun onDestroyView() {
@@ -62,19 +66,16 @@ class MainFragment : BaseFragment(), IMainView {
 
     @OnClick(R.id.button_schedule)
     protected fun onButtonSchedule() {
-        Log.i(mainTag, "Schedule!")
         presenter.onSchedule()
     }
 
     @OnClick(R.id.button_map)
     protected fun onButtonMap() {
-        Log.i(mainTag, "Map!")
         presenter.onMap()
     }
 
     @OnClick(R.id.button_about)
     protected fun onButtonAbout() {
-        Log.i(mainTag, "About!")
         presenter.onAbout()
     }
 }

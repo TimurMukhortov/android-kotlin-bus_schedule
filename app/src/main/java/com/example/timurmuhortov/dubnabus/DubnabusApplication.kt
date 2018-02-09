@@ -17,6 +17,10 @@ import javax.inject.Inject
 
 class DubnabusApplication : Application(), HasActivityInjector {
 
+    companion object {
+        lateinit var instance: DubnabusApplication
+    }
+
     @Inject
     protected lateinit var dispatchingActivityInjector: DispatchingAndroidInjector<Activity>
 
