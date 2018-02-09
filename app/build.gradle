@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -24,16 +26,37 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     //Kotlin Version
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     //SupportLibrary
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibrary}"
+    implementation "com.android.support.constraint:constraint-layout:${rootProject.ext.constraintLayout}"
+    implementation "com.android.support:design:${rootProject.ext.supportLibrary}"
 
     //ConstraintLayout
     implementation "com.android.support.constraint:constraint-layout:${rootProject.ext.constraintLayout}"
+
+    //Dagger2
+    implementation "com.google.dagger:dagger:${rootProject.ext.dagger2}"
+    implementation "com.google.dagger:dagger-android:${rootProject.ext.dagger2}"
+    implementation "com.google.dagger:dagger-android-support:${rootProject.ext.dagger2}"
+    kapt "com.google.dagger:dagger-android-processor:${rootProject.ext.dagger2}"
+    kapt "com.google.dagger:dagger-compiler:${rootProject.ext.dagger2}"
+    kapt "com.google.dagger:dagger-android-support:${rootProject.ext.dagger2}"
+
+    //Moxy
+    implementation "com.arello-mobile:moxy:${rootProject.ext.moxy}"
+    implementation "com.arello-mobile:moxy-android:${rootProject.ext.moxy}"
+    implementation "com.arello-mobile:moxy-app-compat:${rootProject.ext.moxy}"
+    kapt "com.arello-mobile:moxy-compiler:${rootProject.ext.moxy}"
+
+    //ButterKnife
+    implementation "com.jakewharton:butterknife:${rootProject.ext.butterKnife}"
+    kapt "com.jakewharton:butterknife-compiler:${rootProject.ext.butterKnife}"
+
+    //Cicerone
+    compile "ru.terrakok.cicerone:cicerone:${rootProject.ext.cicerone}"
+
 }
