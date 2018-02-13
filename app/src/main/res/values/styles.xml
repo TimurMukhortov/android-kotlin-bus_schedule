@@ -16,6 +16,8 @@
         <item name="android:textSize">22sp</item>
     </style>
 
+    <!--Schedule Screen-->
+
     <style name="ScheduleScreen.Text.Bold" parent="TextAppearance.AppCompat">
         <item name="android:textStyle">bold</item>
     </style>
@@ -31,5 +33,9 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="ScheduleScreen.Text.ArrivalTime" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/ScheduleScreen.ArrivalTime.colorGray</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 
 </resources>

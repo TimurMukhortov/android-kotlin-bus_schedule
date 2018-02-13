@@ -5,4 +5,5 @@
     <string name="about">О приложении</string>
     <string name="toolbar_main">РАСПИСАНИЕ АВТОБУСОВ \n г. Дубна</string>
     <string name="title">Title</string>
+    <string name="arrival_time">Время прибытия:</string>
 </resources>
