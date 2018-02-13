@@ -15,5 +15,5 @@
     <color name="colorBlack_40per">#64000000</color>
 
     <!--ScheduleScreen-->
-    <color name="ScheduleScreen.ArrivalTime.colorGray">#939393</color>
+    <color name="ScheduleScreen.ArrivalTime.colorGray">#bababa</color>
 </resources>
