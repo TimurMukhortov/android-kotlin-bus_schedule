@@ -29,12 +29,11 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     //SupportLibrary
+    implementation "com.android.support:design:${rootProject.ext.supportLibrary}"
+    implementation "com.android.support:support-v4:${rootProject.ext.supportLibrary}"
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibrary}"
     implementation "com.android.support.constraint:constraint-layout:${rootProject.ext.constraintLayout}"
-    implementation "com.android.support:design:${rootProject.ext.supportLibrary}"
-
-    //ConstraintLayout
-    implementation "com.android.support.constraint:constraint-layout:${rootProject.ext.constraintLayout}"
+    implementation "com.android.support:cardview-v7:${rootProject.ext.supportLibrary}"
 
     //Dagger2
     implementation "com.google.dagger:dagger:${rootProject.ext.dagger2}"
