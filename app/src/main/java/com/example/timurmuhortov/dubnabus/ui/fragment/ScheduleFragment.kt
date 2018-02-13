@@ -1,6 +1,8 @@
 package com.example.timurmuhortov.dubnabus.ui.fragment
 
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +18,7 @@ import com.example.timurmuhortov.dubnabus.extension.setCenterTitle
 import com.example.timurmuhortov.dubnabus.presentation.presenter.schedule.SchedulePresenter
 import com.example.timurmuhortov.dubnabus.presentation.view.IScheduleView
 import com.example.timurmuhortov.dubnabus.ui.base.BaseFragment
+import com.example.timurmuhortov.dubnabus.util.ScheduleAdapter
 import javax.inject.Inject
 
 /**
@@ -36,11 +39,17 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
     @InjectPresenter
     lateinit var presenter: SchedulePresenter
 
+    @Inject
+    protected lateinit var adapterSchedule: ScheduleAdapter
+
     @ProvidePresenter
     fun providePresenter() = presenter
 
     @BindView(R.id.toolbar)
     protected lateinit var toolbar: Toolbar
+
+    @BindView(R.id.recyclerView_schedule)
+    lateinit var recyclerViewSchedule: RecyclerView
 
     private lateinit var unbinder: Unbinder
 
@@ -48,10 +57,14 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
             inflater.inflate(R.layout.fragment_schedule, container, false)
                     .also {
                         unbinder = ButterKnife.bind(this@ScheduleFragment, it)
-                        prepareToolbar(toolbar, R.color.colorTransparent){
+
+                        prepareToolbar(toolbar, R.color.colorTransparent) {
                             presenter.onBack()
                         }
                         toolbar.setCenterTitle("Расписание")
+
+                        recyclerViewSchedule.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+                        recyclerViewSchedule.adapter = adapterSchedule
                     }
 
     override fun onDestroyView() {
