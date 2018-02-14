@@ -23,6 +23,14 @@
       "secondMinute": "-",
       "thirdMinute": "30 мин",
       "fourthMinute": "55 мин"
+    },
+    {
+      "id": "Березняка",
+      "hours": "17 ч",
+      "firstMinute": "15 мин",
+      "secondMinute": "-",
+      "thirdMinute": "45 мин",
+      "fourthMinute": "55 мин"
     }
   ]
 }
