@@ -13,12 +13,13 @@ import butterknife.Unbinder
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.timurmuhortov.dubnabus.R
+import com.example.timurmuhortov.dubnabus.data.ui.TimeViewData
 import com.example.timurmuhortov.dubnabus.extension.prepareToolbar
 import com.example.timurmuhortov.dubnabus.extension.setCenterTitle
 import com.example.timurmuhortov.dubnabus.presentation.presenter.schedule.SchedulePresenter
 import com.example.timurmuhortov.dubnabus.presentation.view.IScheduleView
 import com.example.timurmuhortov.dubnabus.ui.base.BaseFragment
-import com.example.timurmuhortov.dubnabus.util.ScheduleAdapter
+import com.example.timurmuhortov.dubnabus.util.adapter.ScheduleAdapter
 import javax.inject.Inject
 
 /**
@@ -30,11 +31,10 @@ import javax.inject.Inject
 
 
 class ScheduleFragment : BaseFragment(), IScheduleView {
-
     companion object {
+
         fun newInstance() = ScheduleFragment()
     }
-
     @Inject
     @InjectPresenter
     lateinit var presenter: SchedulePresenter
@@ -70,5 +70,9 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
     override fun onDestroyView() {
         super.onDestroyView()
         unbinder.unbind()
+    }
+
+    override fun showTimes(times: List<TimeViewData>) {
+        adapterSchedule.schedules = times
     }
 }

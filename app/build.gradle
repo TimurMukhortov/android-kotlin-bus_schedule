@@ -62,4 +62,11 @@ dependencies {
     //Realm
     implementation "io.realm:android-adapters:${rootProject.ext.realmAdapters}"
 
+    //RxJava2
+    compile "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxJava}"
+    compile "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxAndroid}"
+
+    //Gson
+    compile "com.google.code.gson:gson:${rootProject.ext.gson}"
+
 }
