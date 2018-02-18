@@ -69,4 +69,10 @@ dependencies {
     //Gson
     compile "com.google.code.gson:gson:${rootProject.ext.gson}"
 
+    implementation 'com.github.arcadefire:nice-spinner:1.3.1'
+
+}
+
+repositories {
+    mavenCentral()
 }
