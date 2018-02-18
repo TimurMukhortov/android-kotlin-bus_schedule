@@ -7,7 +7,7 @@ import android.widget.TextView
 import butterknife.BindView
 import butterknife.ButterKnife
 import com.example.timurmuhortov.dubnabus.R
-import com.example.timurmuhortov.dubnabus.data.ScheduleViewData
+import com.example.timurmuhortov.dubnabus.data.ui.TimeViewData
 
 /**
  * @author: timur.mukhortov
@@ -41,7 +41,7 @@ class ScheduleViewHolder(
         ButterKnife.bind(this, itemView)
     }
 
-    fun bind(data: ScheduleViewData) {
+    fun bind(data: TimeViewData) {
         hour.text = data.hour
         minuteFirst.text = data.minuteFirst
         minuteSecond.text = data.minuteSecond

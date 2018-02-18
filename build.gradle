@@ -36,4 +36,7 @@ ext {
     butterKnife = "8.8.1"
     cicerone = "2.1.0"
     realmAdapters = "2.1.1"
+    rxJava = "2.1.5"
+    rxAndroid = "2.0.1"
+    gson = "2.8.2"
 }

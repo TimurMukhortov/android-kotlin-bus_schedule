@@ -1,4 +1,4 @@
-package com.example.timurmuhortov.dubnabus.data
+package com.example.timurmuhortov.dubnabus.data.ui
 
 /**
  * @author: timur.mukhortov
@@ -8,7 +8,7 @@ package com.example.timurmuhortov.dubnabus.data
  **/
 
 
-data class ScheduleViewData(
+data class TimeViewData(
         val hour: String,
         val minuteFirst: String,
         val minuteSecond: String,

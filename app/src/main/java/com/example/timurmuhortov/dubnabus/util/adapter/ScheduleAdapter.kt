@@ -1,9 +1,9 @@
-package com.example.timurmuhortov.dubnabus.util
+package com.example.timurmuhortov.dubnabus.util.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.example.timurmuhortov.dubnabus.data.ScheduleViewData
+import com.example.timurmuhortov.dubnabus.data.ui.TimeViewData
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
 import com.example.timurmuhortov.dubnabus.ui.viewholder.ScheduleViewHolder
 import javax.inject.Inject
@@ -16,9 +16,9 @@ import javax.inject.Inject
  **/
 
 @FragmentScope
-class ScheduleAdapter @Inject constructor() : RecyclerView.Adapter<ScheduleViewHolder>() {
+class ScheduleAdapter @Inject constructor() : RecyclerView.Adapter< ScheduleViewHolder>() {
 
-    var schedules: List<ScheduleViewData>? = null
+    var schedules: List<TimeViewData>? = null
         set(value) {
             field = value
             notifyDataSetChanged()
