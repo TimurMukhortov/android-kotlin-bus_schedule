@@ -9,7 +9,8 @@ package com.example.timurmuhortov.dubnabus.data.entity
 
 
 data class Time(
-        val id: String? = null,
+        val id: Int,
+        val name: String,
         val hours: String,
         val firstMinute: String,
         val secondMinute: String,

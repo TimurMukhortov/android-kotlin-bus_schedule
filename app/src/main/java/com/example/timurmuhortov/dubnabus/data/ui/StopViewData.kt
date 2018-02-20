@@ -1,16 +1,14 @@
-package com.example.timurmuhortov.dubnabus.data.entity
+package com.example.timurmuhortov.dubnabus.data.ui
 
 /**
  * @author: timur.mukhortov
  * date: 18.02.2018
- * time: 20:02
+ * time: 22:21
  * @LinkedIn: linkedin.com/in/timurmukhortov
  **/
 
 
-data class Stop(
+data class StopViewData(
         val id: Int,
         val name: String
-) {
-    override fun toString(): String = name
-}
+)

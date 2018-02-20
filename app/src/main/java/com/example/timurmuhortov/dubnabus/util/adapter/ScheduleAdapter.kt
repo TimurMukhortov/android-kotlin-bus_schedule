@@ -16,7 +16,7 @@ import javax.inject.Inject
  **/
 
 @FragmentScope
-class ScheduleAdapter @Inject constructor() : RecyclerView.Adapter< ScheduleViewHolder>() {
+class ScheduleAdapter @Inject constructor() : RecyclerView.Adapter<ScheduleViewHolder>() {
 
     var schedules: List<TimeViewData>? = null
         set(value) {

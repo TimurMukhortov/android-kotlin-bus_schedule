@@ -1,5 +1,7 @@
 package com.example.timurmuhortov.dubnabus.domain
 
+import com.example.timurmuhortov.dubnabus.data.entity.Bus
+import com.example.timurmuhortov.dubnabus.data.entity.Stop
 import com.example.timurmuhortov.dubnabus.data.entity.Time
 import io.reactivex.Single
 
@@ -13,5 +15,11 @@ import io.reactivex.Single
 
 interface IScheduleRepository {
 
-    fun loadTimes(): Single<List<Time>>
+    fun loadStopsDataBase(): Single<List<Time>>
+
+    fun loadStopsNetwork(): Single<List<Stop>>
+
+    fun loadDefaultBuses(): Single<List<Bus>>
+
+    fun loadBuses(): Single<List<Bus>>
 }

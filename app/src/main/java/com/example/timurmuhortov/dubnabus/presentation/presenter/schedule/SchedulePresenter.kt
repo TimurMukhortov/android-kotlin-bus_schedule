@@ -1,9 +1,8 @@
 package com.example.timurmuhortov.dubnabus.presentation.presenter.schedule
 
-import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
-import com.example.timurmuhortov.dubnabus.data.ui.TimeViewData
+import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
 import com.example.timurmuhortov.dubnabus.domain.IScheduleRepository
 import com.example.timurmuhortov.dubnabus.presentation.view.IScheduleView
@@ -27,28 +26,29 @@ class SchedulePresenter @Inject constructor(
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
-        scheduleRepository
-                .loadTimes()
+        scheduleRepository.loadStopsDataBase()
                 .subscribe({
-                    viewState.showTimes(
+                    viewState.showStopName(
                             it.map {
-                                TimeViewData(
-                                        it.hours,
-                                        it.firstMinute,
-                                        it.secondMinute,
-                                        it.thirdMinute,
-                                        it.fourthMinute
-                                        )
+                                StopViewData(
+                                        it.id,
+                                        it.name
+                                )
                             }
                     )
                 }, {
-                    Log.i("presenter", it.message)
+                    it.printStackTrace()
                 })
 
+
+    }
+
+    fun busesDefault(){
 
     }
 
     fun onBack() {
         router.exit()
     }
+
 }
