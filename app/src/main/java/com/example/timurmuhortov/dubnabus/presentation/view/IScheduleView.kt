@@ -28,4 +28,6 @@ interface IScheduleView : MvpView {
 
     fun showAlertDialog(title: String, message: String)
 
+    fun showShedule(stops: List<StopViewData>, buses: List<BusViewData>)
+
 }

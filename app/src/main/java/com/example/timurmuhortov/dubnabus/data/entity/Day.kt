@@ -10,8 +10,7 @@ package com.example.timurmuhortov.dubnabus.data.entity
 
 data class Day(
         val id: Int,
-        val name: String,
         val buses: List<Bus>
 ){
-    override fun toString(): String = name
+    //override fun toString(): String = name
 }

@@ -3,6 +3,9 @@ package com.example.timurmuhortov.dubnabus.presentation.presenter.schedule
 import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
+import com.example.timurmuhortov.dubnabus.data.entity.Schedule
+import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
+import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
 import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleRepository
 import com.example.timurmuhortov.dubnabus.presentation.view.IScheduleView
@@ -25,11 +28,15 @@ class SchedulePresenter @Inject constructor(
         private val router: Router
 ) : MvpPresenter<IScheduleView>() {
 
+    private var scheduleList: Schedule? = null
+
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
         scheduleRepository.loadNetworkSchedule()
                 .subscribe({
-
+                   schedule ->
+                        scheduleList = schedule
+                        val v = "df"
                 }, {
                     (it as? NetworkError)?.let {
                         viewState.showAlertDialog("Ошибка", it.code.toString() + " : " + it.message)

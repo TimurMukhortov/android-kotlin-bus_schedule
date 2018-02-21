@@ -9,5 +9,5 @@ package com.example.timurmuhortov.dubnabus.domain
 
 
 object URLS {
-    const val BACKEND_URL = "http://ec2-18-220-222-202.us-east-2.compute.amazonaws.com/"
+    const val BACKEND_URL = "http://18.220.222.202/"
 }

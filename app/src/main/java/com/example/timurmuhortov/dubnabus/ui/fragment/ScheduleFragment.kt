@@ -133,7 +133,15 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
     }
 
     override fun showAlertDialog(title: String, message: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
+        val s = title + message
+    }
+
+    override fun showShedule(stops: List<StopViewData>, buses: List<BusViewData>) {
+        adapterStop.setStops(stops)
+        spinnerStop.setAdapter(ArrayAdapter(this.context, android.R.layout.simple_spinner_item, stops))
+        adapterBus.setBuses(buses)
+        spinnerBus.setAdapter(ArrayAdapter(this.context, android.R.layout.simple_spinner_item, stops))
     }
 
     private fun updateBuses() {
