@@ -14,7 +14,7 @@ import javax.inject.Inject
 @FragmentScope
 class StopAdapter @Inject constructor() {
 
-    var stops: List<StopViewData>? = null
+    private var stops: List<StopViewData>? = null
 
     /*
     *
@@ -33,8 +33,7 @@ class StopAdapter @Inject constructor() {
     *
     *
      */
-    fun getDataStops() = stops
-
+    fun getStops() = stops
 
     /*
     *
@@ -42,6 +41,5 @@ class StopAdapter @Inject constructor() {
     *
      */
     fun getStopId(position: Int) = stops?.get(position)?.id
-
 
 }

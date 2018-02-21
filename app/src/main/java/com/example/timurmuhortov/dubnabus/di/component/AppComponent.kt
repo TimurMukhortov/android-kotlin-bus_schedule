@@ -22,7 +22,7 @@ import javax.inject.Singleton
     (RealmModule::class),
     (RepositoryModule::class),
     (UtilModule::class),
-    (GsonModule::class)
+    (NetworkModule::class)
 ])
 interface AppComponent {
 

@@ -1,7 +1,7 @@
 package com.example.timurmuhortov.dubnabus.di.module
 
 import com.example.timurmuhortov.dubnabus.data.repository.ScheduleRepository
-import com.example.timurmuhortov.dubnabus.domain.IScheduleRepository
+import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleRepository
 import dagger.Binds
 import dagger.Module
 import javax.inject.Singleton

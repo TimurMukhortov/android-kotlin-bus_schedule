@@ -4,7 +4,7 @@ import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
-import com.example.timurmuhortov.dubnabus.domain.IScheduleRepository
+import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleRepository
 import com.example.timurmuhortov.dubnabus.presentation.view.IScheduleView
 import ru.terrakok.cicerone.Router
 import javax.inject.Inject

@@ -14,33 +14,32 @@ import javax.inject.Inject
 @FragmentScope
 class BusAdapter @Inject constructor() {
 
-    var buses: List<BusViewData>? = null
+    private var buses: List<BusViewData>? = null
 
     /*
     *
-    * Описание: Устанавливаем имена наших остановок
+    * Описание: Устанавливаем имена наших автобусов
     *
-    * Параметры List<StopViewData> - лист с остановками
+    * Параметры List<BusViewData> - лист с автобусами
     *
      */
-    fun setBuses(stops: List<BusViewData>) {
-        this.buses = stops
+    fun setBuses(buses: List<BusViewData>) {
+        this.buses = buses
     }
 
     /*
     *
-    * Описание: Возвращаем имена наших остановок (List<StopViewData>)
+    * Описание: Возвращаем номера наших автобусов (List<BusViewData>)
     *
     *
      */
-    fun getDataStops() = buses
-
+    fun getBuses() = buses
 
     /*
     *
-    * Описание: Возвращает имя остановки по позиции
+    * Описание: Возвращает номер автобуса по позиции
     *
      */
-    fun getStopId(position: Int) = buses?.get(position)?.id
+    fun getBusId(position: Int) = buses?.get(position)?.id
 
 }

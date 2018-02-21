@@ -1,4 +1,4 @@
-package com.example.timurmuhortov.dubnabus.domain
+package com.example.timurmuhortov.dubnabus.domain.irepository
 
 import com.example.timurmuhortov.dubnabus.data.entity.Bus
 import com.example.timurmuhortov.dubnabus.data.entity.Stop

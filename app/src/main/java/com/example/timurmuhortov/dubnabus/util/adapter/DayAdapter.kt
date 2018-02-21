@@ -14,21 +14,21 @@ import javax.inject.Inject
 @FragmentScope
 class DayAdapter @Inject constructor() {
 
-    private val days = arrayListOf(DayViewData(0,"Будни"), DayViewData(5, "Суббота"), DayViewData(6, "Воскресенье"))
+    private val days = arrayListOf(DayViewData(0, "Будни"), DayViewData(5, "Суббота"), DayViewData(6, "Воскресенье"))
 
     /*
-*
-* Описание: Возвращаем имена наших остановок (List<StopViewData>)
-*
-*
- */
+    *
+    * Описание: Возвращаем список наших дней (List<DayViewData>)
+    *
+    *
+    */
     fun getDays() = days
 
     /*
     *
-    * Описание: Возвращает имя остановки по позиции
+    * Описание: Возвращает день по позиции
     *
      */
-    fun getStopId(position: Int) = days[position].id
+    fun getDayId(position: Int) = days[position].id
 
 }

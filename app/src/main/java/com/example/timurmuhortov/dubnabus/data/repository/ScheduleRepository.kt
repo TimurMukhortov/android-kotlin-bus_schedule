@@ -3,7 +3,7 @@ package com.example.timurmuhortov.dubnabus.data.repository
 import com.example.timurmuhortov.dubnabus.data.entity.Bus
 import com.example.timurmuhortov.dubnabus.data.entity.Stop
 import com.example.timurmuhortov.dubnabus.data.entity.Time
-import com.example.timurmuhortov.dubnabus.domain.IScheduleRepository
+import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleRepository
 import com.example.timurmuhortov.dubnabus.util.reader.IFileReader
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
