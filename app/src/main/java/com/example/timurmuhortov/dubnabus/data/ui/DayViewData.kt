@@ -11,4 +11,6 @@ package com.example.timurmuhortov.dubnabus.data.ui
 data class DayViewData(
         val id: Int,
         val name: String
-)
+){
+    override fun toString() = name
+}

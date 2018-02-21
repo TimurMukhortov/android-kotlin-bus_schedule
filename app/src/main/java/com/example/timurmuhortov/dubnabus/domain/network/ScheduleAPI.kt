@@ -19,6 +19,6 @@ interface ScheduleAPI {
     * Получение списка автобусных остановок, номеров автобусов, времени
     *
      */
-    @GET("getSchedule")
+    @GET("schedule")
     fun getSchedule(): Single<Schedule>
 }

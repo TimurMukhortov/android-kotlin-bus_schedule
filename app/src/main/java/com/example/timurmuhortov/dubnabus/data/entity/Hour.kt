@@ -1,5 +1,7 @@
 package com.example.timurmuhortov.dubnabus.data.entity
 
+import com.google.gson.annotations.SerializedName
+
 /**
  * @author: timur.mukhortov
  * date: 21.02.2018
@@ -9,6 +11,8 @@ package com.example.timurmuhortov.dubnabus.data.entity
 
 
 data class Hour(
+        @SerializedName("hour")
         val hour: Int,
-        var minutes: Int
+        @SerializedName("minutes")
+        var minutes: List<Int>
 )

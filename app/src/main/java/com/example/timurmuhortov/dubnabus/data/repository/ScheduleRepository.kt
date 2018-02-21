@@ -34,7 +34,9 @@ class ScheduleRepository @Inject constructor(
 
     override fun loadNetworkSchedule() = retrofit.getSchedule()
             .subscribeOn(Schedulers.io())
-            .onErrorResumeNext { Single.error(networkErrorMapper.map(it)) }
+            .onErrorResumeNext {
+                val v = it
+                Single.error(networkErrorMapper.map(it)) }
             .observeOn(AndroidSchedulers.mainThread())
 
     override fun loadStopsDataBase() =
