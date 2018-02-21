@@ -93,7 +93,7 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
 
                         spinnerStop.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
                             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                                updateBuses()
+                                presenter.getBusesForStop(adapterStop.getStopId(position))
                             }
 
                             override fun onNothingSelected(parent: AdapterView<*>) {}

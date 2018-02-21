@@ -40,6 +40,6 @@ class StopAdapter @Inject constructor() {
     * Описание: Возвращает имя остановки по позиции
     *
      */
-    fun getStopId(position: Int) = stops?.get(position)?.id
+    fun getStopId(position: Int) = stops?.get(position)?.id ?: 0
 
 }

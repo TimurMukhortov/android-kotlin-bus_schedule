@@ -40,6 +40,6 @@ class BusAdapter @Inject constructor() {
     * Описание: Возвращает номер автобуса по позиции
     *
      */
-    fun getBusId(position: Int) = buses?.get(position)?.id
+    fun getBusId(position: Int) = buses?.get(position)?.id ?: 0
 
 }

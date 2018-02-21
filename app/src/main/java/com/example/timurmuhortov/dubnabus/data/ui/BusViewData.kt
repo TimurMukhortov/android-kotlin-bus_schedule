@@ -9,5 +9,7 @@ package com.example.timurmuhortov.dubnabus.data.ui
  
  
 data class BusViewData(
-        val id: String
-)
+        val id: Int
+){
+    override fun toString() = id.toString()
+}

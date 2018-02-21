@@ -35,16 +35,14 @@ class SchedulePresenter @Inject constructor(
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
         scheduleRepository.loadNetworkSchedule()
-                .subscribe({
-                   schedule ->
-                        scheduleList = schedule
-                        viewState.showStopName(schedule.stops.map {
-                            StopViewData(
-                                    it.id,
-                                    it.name
-                            )
-                        })
-                    val v = "f"
+                .subscribe({ schedule ->
+                    scheduleList = schedule
+                    viewState.showStopName(schedule.stops.map {
+                        StopViewData(
+                                it.id,
+                                it.name
+                        )
+                    })
                 }, {
                     (it as? NetworkError)?.let {
                         viewState.showAlertDialog("Ошибка", it.code.toString() + " : " + it.message)
@@ -57,8 +55,18 @@ class SchedulePresenter @Inject constructor(
         router.exit()
     }
 
-    fun getBusesForStop(){
-
+    fun getBusesForStop(stopId: Int) = scheduleList?.stops?.forEach { stop ->
+        if (stopId == stop.id) {
+            stop.days.forEach { day ->
+                viewState.showBusName(
+                        day.buses.map {
+                            BusViewData(
+                                    it.id
+                            )
+                        })
+            }
+        }
     }
+
 
 }
