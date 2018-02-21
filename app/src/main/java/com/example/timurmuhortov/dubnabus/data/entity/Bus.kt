@@ -9,7 +9,8 @@ package com.example.timurmuhortov.dubnabus.data.entity
 
 
 data class Bus(
-        val id: Int
+        val id: Int,
+        val times: List<Hour>
 ) {
     override fun toString(): String = "№ " + id.toString()
 }

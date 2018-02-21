@@ -1,11 +1,12 @@
 package com.example.timurmuhortov.dubnabus.presentation.presenter.schedule
 
+import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
-import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
 import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleRepository
 import com.example.timurmuhortov.dubnabus.presentation.view.IScheduleView
+import com.example.timurmuhortov.dubnabus.util.retrofit.NetworkError
 import ru.terrakok.cicerone.Router
 import javax.inject.Inject
 
@@ -26,24 +27,14 @@ class SchedulePresenter @Inject constructor(
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
-        scheduleRepository.loadStopsDataBase()
+        scheduleRepository.loadNetworkSchedule()
                 .subscribe({
-                    viewState.showStopName(
-                            it.map {
-                                StopViewData(
-                                        it.id,
-                                        it.name
-                                )
-                            }
-                    )
+
                 }, {
-                    it.printStackTrace()
+                    (it as? NetworkError)?.let {
+                        viewState.showAlertDialog("Ошибка", it.code.toString() + " : " + it.message)
+                    }
                 })
-
-
-    }
-
-    fun busesDefault(){
 
     }
 

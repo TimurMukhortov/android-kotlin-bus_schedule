@@ -132,6 +132,10 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
         spinnerBus.setAdapter(ArrayAdapter(this.context, android.R.layout.simple_spinner_item, buses))
     }
 
+    override fun showAlertDialog(title: String, message: String) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     private fun updateBuses() {
 
     }

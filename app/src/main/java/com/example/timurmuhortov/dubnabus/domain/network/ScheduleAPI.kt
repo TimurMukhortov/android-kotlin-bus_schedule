@@ -1,5 +1,9 @@
 package com.example.timurmuhortov.dubnabus.domain.network
 
+import com.example.timurmuhortov.dubnabus.data.entity.Schedule
+import io.reactivex.Single
+import retrofit2.http.GET
+
 /**
  * @author: timur.mukhortov
  * date: 20.02.2018
@@ -9,4 +13,12 @@ package com.example.timurmuhortov.dubnabus.domain.network
 
 
 interface ScheduleAPI {
+
+    /*
+    *
+    * Получение списка автобусных остановок, номеров автобусов, времени
+    *
+     */
+    @GET("getSchedule")
+    fun getSchedule(): Single<Schedule>
 }

@@ -10,7 +10,8 @@ package com.example.timurmuhortov.dubnabus.data.entity
 
 data class Stop(
         val id: Int,
-        val name: String
+        val name: String,
+        val day: List<Day>
 ) {
     override fun toString(): String = name
 }

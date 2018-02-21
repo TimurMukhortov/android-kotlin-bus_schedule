@@ -26,4 +26,6 @@ interface IScheduleView : MvpView {
 
     fun showBusName(buses: List<BusViewData>)
 
+    fun showAlertDialog(title: String, message: String)
+
 }

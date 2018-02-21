@@ -4,7 +4,9 @@ import com.example.timurmuhortov.dubnabus.data.entity.Bus
 import com.example.timurmuhortov.dubnabus.data.entity.Stop
 import com.example.timurmuhortov.dubnabus.data.entity.Time
 import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleRepository
+import com.example.timurmuhortov.dubnabus.domain.network.ScheduleAPI
 import com.example.timurmuhortov.dubnabus.util.reader.IFileReader
+import com.example.timurmuhortov.dubnabus.util.retrofit.INetworkErrorMapper
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -19,7 +21,9 @@ import javax.inject.Inject
 
 
 class ScheduleRepository @Inject constructor(
-        private val fileReader: IFileReader
+        private val fileReader: IFileReader,
+        private val retrofit: ScheduleAPI,
+        private val networkErrorMapper: INetworkErrorMapper
 ) : IScheduleRepository {
 
     private inner class Times(val times: List<Time>)
@@ -27,6 +31,11 @@ class ScheduleRepository @Inject constructor(
     companion object {
         private const val TIMES_FILE_LOCATION = "times.json"
     }
+
+    override fun loadNetworkSchedule() = retrofit.getSchedule()
+            .subscribeOn(Schedulers.io())
+            .onErrorResumeNext { Single.error(networkErrorMapper.map(it)) }
+            .observeOn(AndroidSchedulers.mainThread())
 
     override fun loadStopsDataBase() =
             fileReader.readFromAsset(TIMES_FILE_LOCATION, Times::class.java)
