@@ -1,0 +1,40 @@
+{
+  "times": [
+    {
+      "id": 1,
+      "name" : "Dubna",
+      "hours": "14 ч",
+      "firstMinute": "10 мин",
+      "secondMinute": "25 мин",
+      "thirdMinute": "45 мин",
+      "fourthMinute": "55 мин"
+    },
+    {
+      "id": 2,
+      "name" : "Moscow",
+      "hours": "15 ч",
+      "firstMinute": "10 мин",
+      "secondMinute": "-",
+      "thirdMinute": "45 мин",
+      "fourthMinute": "-"
+    },
+    {
+      "id": 3,
+      "name" : "Piter",
+      "hours": "16 ч",
+      "firstMinute": "00 мин",
+      "secondMinute": "-",
+      "thirdMinute": "30 мин",
+      "fourthMinute": "55 мин"
+    },
+    {
+      "id": 4,
+      "name" : "Tver",
+      "hours": "17 ч",
+      "firstMinute": "15 мин",
+      "secondMinute": "-",
+      "thirdMinute": "45 мин",
+      "fourthMinute": "55 мин"
+    }
+  ]
+}
