@@ -3,12 +3,9 @@ package com.example.timurmuhortov.dubnabus.presentation.view
 import com.arellomobile.mvp.MvpView
 import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
-import com.example.timurmuhortov.dubnabus.data.entity.Bus
-import com.example.timurmuhortov.dubnabus.data.entity.Stop
 import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
-import com.example.timurmuhortov.dubnabus.data.ui.DayViewData
+import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
 import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
-import com.example.timurmuhortov.dubnabus.data.ui.TimeViewData
 
 /**
  * @author: timur.mukhortov
@@ -20,7 +17,7 @@ import com.example.timurmuhortov.dubnabus.data.ui.TimeViewData
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface IScheduleView : MvpView {
 
-    fun showTimes(times: List<TimeViewData>)
+    fun showHours(times: List<HourViewData>)
 
     fun showStopName(stops: List<StopViewData>)
 

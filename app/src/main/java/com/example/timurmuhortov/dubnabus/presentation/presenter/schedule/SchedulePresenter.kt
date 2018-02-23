@@ -1,12 +1,10 @@
 package com.example.timurmuhortov.dubnabus.presentation.presenter.schedule
 
-import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
-import com.example.timurmuhortov.dubnabus.data.entity.Day
 import com.example.timurmuhortov.dubnabus.data.entity.Schedule
-import com.example.timurmuhortov.dubnabus.data.entity.Stop
 import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
+import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
 import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
 import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleRepository
@@ -32,6 +30,10 @@ class SchedulePresenter @Inject constructor(
 
     private var scheduleList: Schedule? = null
 
+    private var stopId: Int = 0
+    private var busId: Int = 0
+    private var dayId: Int = 0
+
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
         scheduleRepository.loadNetworkSchedule()
@@ -55,15 +57,58 @@ class SchedulePresenter @Inject constructor(
         router.exit()
     }
 
-    fun getBusesForStop(stopId: Int) = scheduleList?.stops?.forEach { stop ->
-        if (stopId == stop.id) {
+    fun getBusesForStop(stopId: Int) {
+        this.stopId = stopId
+        scheduleList?.stops?.forEach { stop ->
+            if (stopId == stop.id) {
+                stop.days.forEach { day ->
+                    viewState.showBusName(
+                            day.buses.map {
+                                BusViewData(
+                                        it.id
+                                )
+                            })
+                }
+            }
+        }
+    }
+
+    fun getBusesForStop(stopId: Int, dayId: Int) {
+        this.dayId = dayId
+        scheduleList?.stops?.forEach { stop ->
+            if (stopId == stop.id) {
+                stop.days.forEach { day ->
+                    if (day.id == dayId) {
+                        viewState.showBusName(
+                                day.buses.map {
+                                    BusViewData(
+                                            it.id
+                                    )
+                                }
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    fun getSheduleForBus() = scheduleList?.stops?.forEach { stop ->
+        if(stopId == stop.id) {
             stop.days.forEach { day ->
-                viewState.showBusName(
-                        day.buses.map {
-                            BusViewData(
-                                    it.id
+                if (dayId == day.id) {
+                    day.buses.forEach { bus ->
+                        if (busId == bus.id) {
+                            viewState.showHours(
+                                    bus.hours.map {
+                                        HourViewData(
+                                                it.hour,
+                                                it.minutes
+                                        )
+                                    }
                             )
-                        })
+                        }
+                    }
+                }
             }
         }
     }

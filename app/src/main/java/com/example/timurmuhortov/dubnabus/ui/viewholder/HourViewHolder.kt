@@ -7,7 +7,7 @@ import android.widget.TextView
 import butterknife.BindView
 import butterknife.ButterKnife
 import com.example.timurmuhortov.dubnabus.R
-import com.example.timurmuhortov.dubnabus.data.ui.TimeViewData
+import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
 
 /**
  * @author: timur.mukhortov
@@ -17,7 +17,7 @@ import com.example.timurmuhortov.dubnabus.data.ui.TimeViewData
  **/
 
 
-class ScheduleViewHolder(
+class HourViewHolder(
         inflater: LayoutInflater,
         container: ViewGroup
 ) : RecyclerView.ViewHolder(inflater.inflate(R.layout.item_schedule, container, false)) {
@@ -41,11 +41,23 @@ class ScheduleViewHolder(
         ButterKnife.bind(this, itemView)
     }
 
-    fun bind(data: TimeViewData) {
-        hour.text = data.hour
-        minuteFirst.text = data.minuteFirst
-        minuteSecond.text = data.minuteSecond
-        minuteThird.text = data.minuteThird
-        minuteFourth.text = data.minuteFourth
+//    fun bind(data: Time1ViewData) {
+//        hour.text = data.hour
+//        minuteFirst.text = data.minuteFirst
+//        minuteSecond.text = data.minuteSecond
+//        minuteThird.text = data.minuteThird
+//        minuteFourth.text = data.minuteFourth
+//    }
+    @Deprecated("необходимо поправить этот метод, если в списке автобусов меньше 4-ех " +
+            "все упадет.")
+    fun bind(data: HourViewData){
+        //TODO HourViewHolder
+        // необходимо сделать динамическое создание виджетов
+        // для отображеие минут
+        hour.text = data.hour.toString()
+        minuteFirst.text = data.minutes[0].toString()
+        minuteSecond.text = data.minutes[1].toString()
+        minuteThird.text = data.minutes[2].toString()
+        minuteFourth.text = data.minutes[3].toString()
     }
 }

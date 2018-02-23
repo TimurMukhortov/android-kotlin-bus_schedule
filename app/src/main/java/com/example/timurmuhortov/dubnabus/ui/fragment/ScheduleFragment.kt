@@ -1,5 +1,6 @@
 package com.example.timurmuhortov.dubnabus.ui.fragment
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -16,8 +17,9 @@ import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.timurmuhortov.dubnabus.R
 import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
+import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
 import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
-import com.example.timurmuhortov.dubnabus.data.ui.TimeViewData
+
 import com.example.timurmuhortov.dubnabus.extension.prepareToolbar
 import com.example.timurmuhortov.dubnabus.extension.setCenterTitle
 import com.example.timurmuhortov.dubnabus.presentation.presenter.schedule.SchedulePresenter
@@ -41,7 +43,6 @@ import javax.inject.Inject
 
 class ScheduleFragment : BaseFragment(), IScheduleView {
     companion object {
-
         fun newInstance() = ScheduleFragment()
     }
 
@@ -101,7 +102,7 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
 
                         spinnerDay.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
                             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                                updateSchedule()
+                                //TODO сделать проверку автобусов, которые ходят только по этим дням
                             }
 
                             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -117,7 +118,7 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
         unbinder.unbind()
     }
 
-    override fun showTimes(times: List<TimeViewData>) {
+    override fun showHours(times: List<HourViewData>) {
         adapterSchedule.schedules = times
     }
 
@@ -132,23 +133,18 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
         spinnerBus.setAdapter(ArrayAdapter(this.context, android.R.layout.simple_spinner_item, buses))
     }
 
-    override fun showAlertDialog(title: String, message: String) {
+    override fun showAlertDialog(title: String, message: String) = AlertDialog.Builder(context)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("OK", {button,_ -> button.dismiss() })
+                .create()
+                .show()
 
-        val s = title + message
-    }
 
     override fun showShedule(stops: List<StopViewData>, buses: List<BusViewData>) {
         adapterStop.setStops(stops)
         spinnerStop.setAdapter(ArrayAdapter(this.context, android.R.layout.simple_spinner_item, stops))
         adapterBus.setBuses(buses)
         spinnerBus.setAdapter(ArrayAdapter(this.context, android.R.layout.simple_spinner_item, stops))
-    }
-
-    private fun updateBuses() {
-
-    }
-
-    private fun updateSchedule() {
-
     }
 }
