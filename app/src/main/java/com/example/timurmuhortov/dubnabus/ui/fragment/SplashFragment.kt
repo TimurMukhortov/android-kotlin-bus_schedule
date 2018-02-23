@@ -43,7 +43,6 @@ class SplashFragment : BaseFragment(), ISplashView {
             inflater.inflate(R.layout.fragment_splash, container, false)
                     .also {
                         unbinder = ButterKnife.bind(this@SplashFragment, it)
-                        init()
                     }
 
     override fun onDestroyView() {
@@ -51,8 +50,4 @@ class SplashFragment : BaseFragment(), ISplashView {
         unbinder.unbind()
     }
 
-    private fun init() {
-        Log.i(splashTag, "F. Splash init!")
-        presenter.onMain()
-    }
 }

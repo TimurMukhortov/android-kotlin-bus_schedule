@@ -73,7 +73,7 @@ class SchedulePresenter @Inject constructor(
         }
     }
 
-    fun getBusesForStop(stopId: Int, dayId: Int) {
+    fun getBusesForStopByDay(dayId: Int) {
         this.dayId = dayId
         scheduleList?.stops?.forEach { stop ->
             if (stopId == stop.id) {

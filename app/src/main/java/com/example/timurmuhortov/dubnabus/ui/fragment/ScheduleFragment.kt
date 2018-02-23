@@ -19,6 +19,7 @@ import com.example.timurmuhortov.dubnabus.R
 import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
 import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
 import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
+import com.example.timurmuhortov.dubnabus.extension.getPresenterOnClick
 
 import com.example.timurmuhortov.dubnabus.extension.prepareToolbar
 import com.example.timurmuhortov.dubnabus.extension.setCenterTitle
@@ -91,7 +92,6 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
                         }
                         toolbar.setCenterTitle("Расписание")
 
-
                         spinnerStop.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
                             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
                                 presenter.getBusesForStop(adapterStop.getStopId(position))
@@ -102,7 +102,7 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
 
                         spinnerDay.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
                             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                                //TODO сделать проверку автобусов, которые ходят только по этим дням
+                                presenter.getBusesForStopByDay(adapterDay.getDayId(position))
                             }
 
                             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -140,11 +140,4 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
                 .create()
                 .show()
 
-
-    override fun showShedule(stops: List<StopViewData>, buses: List<BusViewData>) {
-        adapterStop.setStops(stops)
-        spinnerStop.setAdapter(ArrayAdapter(this.context, android.R.layout.simple_spinner_item, stops))
-        adapterBus.setBuses(buses)
-        spinnerBus.setAdapter(ArrayAdapter(this.context, android.R.layout.simple_spinner_item, stops))
-    }
 }
