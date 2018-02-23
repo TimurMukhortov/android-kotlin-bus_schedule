@@ -1,7 +1,7 @@
 package com.example.timurmuhortov.dubnabus.di.module
 
-import com.example.timurmuhortov.dubnabus.data.repository.ScheduleRepository
-import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleRepository
+import com.example.timurmuhortov.dubnabus.data.repository.ScheduleNetworkRepository
+import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleNetworkRepository
 import dagger.Binds
 import dagger.Module
 import javax.inject.Singleton
@@ -18,5 +18,5 @@ abstract class RepositoryModule {
 
     @Singleton
     @Binds
-    abstract fun provideScheduleRepository(repository: ScheduleRepository): IScheduleRepository
+    abstract fun provideNetworkScheduleRepository(repository: ScheduleNetworkRepository): IScheduleNetworkRepository
 }

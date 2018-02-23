@@ -7,7 +7,7 @@ import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
 import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
 import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
-import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleRepository
+import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleNetworkRepository
 import com.example.timurmuhortov.dubnabus.presentation.view.IScheduleView
 import com.example.timurmuhortov.dubnabus.util.retrofit.NetworkError
 import ru.terrakok.cicerone.Router
@@ -24,7 +24,7 @@ import javax.inject.Inject
 @FragmentScope
 @InjectViewState
 class SchedulePresenter @Inject constructor(
-        private val scheduleRepository: IScheduleRepository,
+        private val scheduleRepository: IScheduleNetworkRepository,
         private val router: Router
 ) : MvpPresenter<IScheduleView>() {
 
@@ -36,15 +36,18 @@ class SchedulePresenter @Inject constructor(
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
-        scheduleRepository.loadNetworkSchedule()
+        scheduleRepository.loadSchedule()
                 .subscribe({ schedule ->
                     scheduleList = schedule
+                    stopId = schedule.stops.first().id
+                    busId = 6
                     viewState.showStopName(schedule.stops.map {
                         StopViewData(
                                 it.id,
                                 it.name
                         )
                     })
+                    getSheduleForBus(busId)
                 }, {
                     (it as? NetworkError)?.let {
                         viewState.showAlertDialog("Ошибка", it.code.toString() + " : " + it.message)
@@ -92,12 +95,12 @@ class SchedulePresenter @Inject constructor(
         }
     }
 
-    fun getSheduleForBus() = scheduleList?.stops?.forEach { stop ->
+    fun getSheduleForBus(id: Int) = scheduleList?.stops?.forEach { stop ->
         if(stopId == stop.id) {
             stop.days.forEach { day ->
                 if (dayId == day.id) {
                     day.buses.forEach { bus ->
-                        if (busId == bus.id) {
+                        if (id == bus.id) {
                             viewState.showHours(
                                     bus.hours.map {
                                         HourViewData(

@@ -19,8 +19,6 @@ import com.example.timurmuhortov.dubnabus.R
 import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
 import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
 import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
-import com.example.timurmuhortov.dubnabus.extension.getPresenterOnClick
-
 import com.example.timurmuhortov.dubnabus.extension.prepareToolbar
 import com.example.timurmuhortov.dubnabus.extension.setCenterTitle
 import com.example.timurmuhortov.dubnabus.presentation.presenter.schedule.SchedulePresenter
@@ -106,6 +104,17 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
                             }
 
                             override fun onNothingSelected(parent: AdapterView<*>) {}
+                        })
+
+                        spinnerBus.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener{
+                            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+                            }
+
+                            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                                presenter.getSheduleForBus(adapterBus.getBusId(position))
+                            }
+
                         })
 
                         recyclerViewSchedule.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)

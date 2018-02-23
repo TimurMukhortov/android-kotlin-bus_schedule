@@ -26,7 +26,7 @@ class SplashPresenter @Inject constructor(
 
     private val handler = Handler()
 
-    @Deprecated("Проверить обновление расписания на сервере. Завести переменную в базе.")
+    @Deprecated("Проверить обновление расписания на сервере. Завести переменную в базе и сравнить.")
     private val flag = false
 
     override fun onFirstViewAttach() {

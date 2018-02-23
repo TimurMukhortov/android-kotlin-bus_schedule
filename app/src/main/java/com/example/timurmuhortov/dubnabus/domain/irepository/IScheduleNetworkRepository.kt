@@ -14,15 +14,10 @@ import io.reactivex.Single
  **/
 
 
-interface IScheduleRepository {
+interface IScheduleNetworkRepository {
 
-    fun loadNetworkSchedule(): Single<Schedule>
+    fun loadSchedule(): Single<Schedule>
 
     fun loadStopsDataBase(): Single<List<Time>>
 
-    fun loadStopsNetwork(): Single<List<Stop>>
-
-    fun loadDefaultBuses(): Single<List<Bus>>
-
-    fun loadBuses(): Single<List<Bus>>
 }

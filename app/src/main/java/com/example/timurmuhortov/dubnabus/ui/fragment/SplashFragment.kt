@@ -1,7 +1,6 @@
 package com.example.timurmuhortov.dubnabus.ui.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,8 +23,6 @@ import javax.inject.Inject
 
 
 class SplashFragment : BaseFragment(), ISplashView {
-
-    private val splashTag = "SplashFragment"
 
     companion object {
         fun newInstance() = SplashFragment()

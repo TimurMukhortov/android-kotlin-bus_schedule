@@ -41,7 +41,7 @@ class HourViewHolder(
         ButterKnife.bind(this, itemView)
     }
 
-//    fun bind(data: Time1ViewData) {
+    //    fun bind(data: Time1ViewData) {
 //        hour.text = data.hour
 //        minuteFirst.text = data.minuteFirst
 //        minuteSecond.text = data.minuteSecond
@@ -50,14 +50,14 @@ class HourViewHolder(
 //    }
     @Deprecated("необходимо поправить этот метод, если в списке автобусов меньше 4-ех " +
             "все упадет.")
-    fun bind(data: HourViewData){
+    fun bind(data: HourViewData) {
         //TODO HourViewHolder
         // необходимо сделать динамическое создание виджетов
         // для отображеие минут
         hour.text = data.hour.toString()
-        minuteFirst.text = data.minutes[0].toString()
-        minuteSecond.text = data.minutes[1].toString()
-        minuteThird.text = data.minutes[2].toString()
-        minuteFourth.text = data.minutes[3].toString()
+        minuteFirst.text = if (data.minutes.size > 0) data.minutes[0].toString() else "-"
+        minuteSecond.text = if (data.minutes.size > 1) data.minutes[1].toString() else "-"
+        minuteThird.text = if (data.minutes.size > 2) data.minutes[2].toString() else "-"
+        minuteFourth.text = if (data.minutes.size > 3) data.minutes[3].toString() else "-"
     }
 }
