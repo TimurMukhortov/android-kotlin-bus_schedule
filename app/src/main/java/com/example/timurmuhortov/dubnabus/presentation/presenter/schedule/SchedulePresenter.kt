@@ -2,7 +2,7 @@ package com.example.timurmuhortov.dubnabus.presentation.presenter.schedule
 
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
-import com.example.timurmuhortov.dubnabus.data.entity.Schedule
+import com.example.timurmuhortov.dubnabus.data.entity.schedule.Schedule
 import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
 import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
 import com.example.timurmuhortov.dubnabus.data.ui.StopViewData

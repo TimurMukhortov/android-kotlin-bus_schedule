@@ -1,6 +1,9 @@
 package com.example.timurmuhortov.dubnabus.data.repository.database
 
+import com.example.timurmuhortov.dubnabus.data.entity.Enter
 import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleDataBaseRepository
+import io.reactivex.Single
+import io.realm.Realm
 import javax.inject.Inject
 
 /**
@@ -12,6 +15,10 @@ import javax.inject.Inject
 
 
 class ScheduleDataBaseRepository @Inject constructor(
-
+        private val realm: Realm
 ): IScheduleDataBaseRepository {
+
+    override fun getEnter() = Single.just(realm.where(Enter::class.java).findFirst() != null)
+
+    override fun setEnter() = realm.executeTransaction { it.insert(Enter(false)) }
 }

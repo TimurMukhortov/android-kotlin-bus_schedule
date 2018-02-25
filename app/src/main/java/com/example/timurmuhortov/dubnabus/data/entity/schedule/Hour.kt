@@ -1,4 +1,4 @@
-package com.example.timurmuhortov.dubnabus.data.entity
+package com.example.timurmuhortov.dubnabus.data.entity.schedule
 
 import com.google.gson.annotations.SerializedName
 

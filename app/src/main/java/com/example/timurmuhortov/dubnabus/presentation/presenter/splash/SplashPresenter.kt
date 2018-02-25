@@ -1,10 +1,10 @@
 package com.example.timurmuhortov.dubnabus.presentation.presenter.splash
 
 import android.os.Handler
-import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
+import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleDataBaseRepository
 import com.example.timurmuhortov.dubnabus.presentation.view.ISplashView
 import com.example.timurmuhortov.dubnabus.ui.viewholder.Screens
 import ru.terrakok.cicerone.Router
@@ -21,7 +21,8 @@ import javax.inject.Inject
 @FragmentScope
 @InjectViewState
 class SplashPresenter @Inject constructor(
-        private val router: Router
+        private val router: Router,
+        private val repositoryDataBase: IScheduleDataBaseRepository
 ) : MvpPresenter<ISplashView>() {
 
     private val handler = Handler()
@@ -31,17 +32,21 @@ class SplashPresenter @Inject constructor(
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
+
+        val flagT = firstEntry()
         if(flag){
            //TODO выгрузить расписание
         } else {
-            onMain()
+            onMainSreen()
         }
 
     }
 
-    private fun onMain() {
+    private fun onMainSreen() {
         handler.postDelayed({
             router.replaceScreen(Screens.MAIN)
         }, 2000)
     }
+
+    private fun firstEntry() = repositoryDataBase.getEnter()
 }

@@ -1,7 +1,7 @@
 package com.example.timurmuhortov.dubnabus.data.repository.assets
 
 
-import com.example.timurmuhortov.dubnabus.data.entity.Schedule
+import com.example.timurmuhortov.dubnabus.data.entity.schedule.Schedule
 import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleAssetRepository
 import com.example.timurmuhortov.dubnabus.util.reader.IFileReader
 import io.reactivex.android.schedulers.AndroidSchedulers
