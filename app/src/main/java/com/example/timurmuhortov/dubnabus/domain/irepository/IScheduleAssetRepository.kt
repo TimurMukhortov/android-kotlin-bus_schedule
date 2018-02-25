@@ -11,7 +11,7 @@ import io.reactivex.Single
  **/
 
 
-interface IScheduleLocalRepository {
+interface IScheduleAssetRepository {
 
     fun loadSchedule(): Single<Schedule>
 }

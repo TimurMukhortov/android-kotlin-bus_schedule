@@ -18,6 +18,4 @@ interface IScheduleNetworkRepository {
 
     fun loadSchedule(): Single<Schedule>
 
-    fun loadStopsDataBase(): Single<List<Time>>
-
 }
