@@ -1,8 +1,10 @@
 package com.example.timurmuhortov.dubnabus.di.module
 
 import com.example.timurmuhortov.dubnabus.data.repository.assets.ScheduleAssetRepository
+import com.example.timurmuhortov.dubnabus.data.repository.database.ScheduleDataBaseRepository
 import com.example.timurmuhortov.dubnabus.data.repository.network.ScheduleNetworkRepository
 import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleAssetRepository
+import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleDataBaseRepository
 import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleNetworkRepository
 import dagger.Binds
 import dagger.Module
@@ -25,4 +27,9 @@ abstract class RepositoryModule {
     @Singleton
     @Binds
     abstract fun provideScheduleAssetRepository(repository: ScheduleAssetRepository): IScheduleAssetRepository
+
+    @Singleton
+    @Binds
+    abstract fun provideScheduleDataBaseRepository(repository: ScheduleDataBaseRepository): IScheduleDataBaseRepository
+
 }

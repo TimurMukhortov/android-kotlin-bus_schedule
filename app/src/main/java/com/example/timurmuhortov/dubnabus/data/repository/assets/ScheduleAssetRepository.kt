@@ -15,7 +15,7 @@ import javax.inject.Inject
  * @LinkedIn: linkedin.com/in/timurmukhortov
  **/
 
-
+@Deprecated("Сейчас файл schedule.json содержит всего две остановки, потом заменить на полный файл.")
 class ScheduleAssetRepository @Inject constructor(
         private val fileReader: IFileReader
 ) : IScheduleAssetRepository {
