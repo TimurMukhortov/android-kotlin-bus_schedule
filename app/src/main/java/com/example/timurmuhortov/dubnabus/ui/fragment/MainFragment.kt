@@ -30,18 +30,19 @@ import javax.inject.Inject
 class MainFragment : BaseFragment(), IMainView {
 
     companion object {
-
         fun newInstance() = MainFragment()
     }
+
     @Inject
     @InjectPresenter
     lateinit var presenter: MainPresenter
 
+    @ProvidePresenter
+    fun providePresenter() = presenter
+
     @BindView(R.id.toolbar)
     protected lateinit var toolbar: Toolbar
 
-    @ProvidePresenter
-    fun providePresenter() = presenter
     private lateinit var unbinder: Unbinder
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -16,16 +17,96 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <include
+        android:id="@+id/partial_toolbar"
         layout="@layout/partial_toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout_spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_central_horizontal_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/partial_toolbar">
+
+        <org.angmarch.views.NiceSpinner
+            android:id="@+id/spinner_nameStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Остановка"
+            android:textAppearance="@style/ScheduleScreen.Text.Minute"
+            app:arrowTint="@color/colorWhite"
+            app:backgroundSelector="@color/colorOrange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textTint="@color/colorWhite" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_central_vertical_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <org.angmarch.views.NiceSpinner
+            android:id="@+id/spinner_nameBus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+
+            android:text="Автобус"
+            android:textAppearance="@style/ScheduleScreen.Text.Minute"
+            app:arrowTint="@color/colorWhite"
+            app:backgroundSelector="@color/colorOrange"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_central_vertical_spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_nameStop"
+            app:textTint="@color/colorWhite" />
+
+        <org.angmarch.views.NiceSpinner
+            android:id="@+id/spinner_dayOfWeek"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Дни недели"
+            android:textAppearance="@style/ScheduleScreen.Text.Minute"
+            app:arrowTint="@color/colorWhite"
+            app:backgroundSelector="@color/colorOrange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline_central_vertical_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_nameStop"
+            app:textTint="@color/colorWhite" />
+    </android.support.constraint.ConstraintLayout>
+
+
     <TextView
         android:id="@+id/textView_arrival_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="@string/arrival_time"
@@ -40,6 +121,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_central_horizontal_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_central_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
     <android.support.v7.widget.RecyclerView

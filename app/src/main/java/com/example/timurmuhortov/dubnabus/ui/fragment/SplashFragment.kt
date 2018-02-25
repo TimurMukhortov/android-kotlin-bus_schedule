@@ -1,7 +1,6 @@
 package com.example.timurmuhortov.dubnabus.ui.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,8 +24,6 @@ import javax.inject.Inject
 
 class SplashFragment : BaseFragment(), ISplashView {
 
-    private val splashTag = "SplashFragment"
-
     companion object {
         fun newInstance() = SplashFragment()
     }
@@ -43,7 +40,6 @@ class SplashFragment : BaseFragment(), ISplashView {
             inflater.inflate(R.layout.fragment_splash, container, false)
                     .also {
                         unbinder = ButterKnife.bind(this@SplashFragment, it)
-                        init()
                     }
 
     override fun onDestroyView() {
@@ -51,8 +47,4 @@ class SplashFragment : BaseFragment(), ISplashView {
         unbinder.unbind()
     }
 
-    private fun init() {
-        Log.i(splashTag, "F. Splash init!")
-        presenter.onMain()
-    }
 }

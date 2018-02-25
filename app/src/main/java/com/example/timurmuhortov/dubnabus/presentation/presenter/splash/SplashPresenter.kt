@@ -24,11 +24,22 @@ class SplashPresenter @Inject constructor(
         private val router: Router
 ) : MvpPresenter<ISplashView>() {
 
-    private val splashTag = "SplashPresenter"
     private val handler = Handler()
 
-    fun onMain() {
-        Log.i(splashTag, "P. Main!")
+    @Deprecated("Проверить обновление расписания на сервере. Завести переменную в базе и сравнить.")
+    private val flag = false
+
+    override fun onFirstViewAttach() {
+        super.onFirstViewAttach()
+        if(flag){
+           //TODO выгрузить расписание
+        } else {
+            onMain()
+        }
+
+    }
+
+    private fun onMain() {
         handler.postDelayed({
             router.replaceScreen(Screens.MAIN)
         }, 2000)

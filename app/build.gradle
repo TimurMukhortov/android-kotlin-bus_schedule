@@ -63,10 +63,22 @@ dependencies {
     implementation "io.realm:android-adapters:${rootProject.ext.realmAdapters}"
 
     //RxJava2
-    compile "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxJava}"
-    compile "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxAndroid}"
+    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxJava}"
+    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxAndroid}"
 
     //Gson
-    compile "com.google.code.gson:gson:${rootProject.ext.gson}"
+    implementation "com.google.code.gson:gson:${rootProject.ext.gson}"
 
+    //Spinner
+    implementation "com.github.arcadefire:nice-spinner:${rootProject.ext.spinner}"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofit}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofit}"
+
+}
+
+repositories {
+    mavenCentral()
 }

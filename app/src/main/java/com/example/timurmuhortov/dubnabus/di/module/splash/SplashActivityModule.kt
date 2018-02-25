@@ -29,7 +29,6 @@ abstract class SplashActivityModule {
     @ActivityScope
     abstract fun routing(routing: SplashRouting): IRoutingBinder
 
-
     @FragmentScope
     @ContributesAndroidInjector
     abstract fun fragment(): SplashFragment

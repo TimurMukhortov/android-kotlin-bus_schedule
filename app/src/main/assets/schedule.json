@@ -1,0 +1,2510 @@
+{
+  "stops": [
+    {
+      "id": 25,
+      "name": "Аптека",
+      "days": [
+        {
+          "id": 0,
+          "buses": [
+            {
+              "id": 6,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": [
+                    46
+                  ]
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    16,
+                    56
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    26
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    6,
+                    36
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    36
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": [
+                    6
+                  ]
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    16,
+                    46
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    26
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    6,
+                    46
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    16
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": []
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    1,
+                    31
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    11,
+                    36
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": []
+                },
+                {
+                  "hour": 20,
+                  "minutes": []
+                },
+                {
+                  "hour": 21,
+                  "minutes": []
+                },
+                {
+                  "hour": 22,
+                  "minutes": []
+                },
+                {
+                  "hour": 23,
+                  "minutes": []
+                },
+                {
+                  "hour": 0,
+                  "minutes": []
+                }
+              ]
+            },
+            {
+              "id": 7,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": [
+                    29
+                  ]
+                },
+                {
+                  "hour": 6,
+                  "minutes": [
+                    3,
+                    26,
+                    32,
+                    57
+                  ]
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    2,
+                    17,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    2,
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": [
+                    22,
+                    37
+                  ]
+                },
+                {
+                  "hour": 0,
+                  "minutes": [
+                    5
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": [
+                    53
+                  ]
+                },
+                {
+                  "hour": 6,
+                  "minutes": [
+                    53
+                  ]
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    8,
+                    23,
+                    32,
+                    53
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    13,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    12,
+                    52
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": [
+                    7
+                  ]
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    12,
+                    52
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": []
+                },
+                {
+                  "hour": 0,
+                  "minutes": [
+                    17
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "buses": [
+            {
+              "id": 6,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": []
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    36
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    56
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": []
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    17
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": []
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": []
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": []
+                },
+                {
+                  "hour": 16,
+                  "minutes": []
+                },
+                {
+                  "hour": 17,
+                  "minutes": []
+                },
+                {
+                  "hour": 18,
+                  "minutes": []
+                },
+                {
+                  "hour": 19,
+                  "minutes": []
+                },
+                {
+                  "hour": 20,
+                  "minutes": []
+                },
+                {
+                  "hour": 21,
+                  "minutes": []
+                },
+                {
+                  "hour": 22,
+                  "minutes": []
+                },
+                {
+                  "hour": 23,
+                  "minutes": []
+                },
+                {
+                  "hour": 0,
+                  "minutes": []
+                }
+              ]
+            },
+            {
+              "id": 7,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": []
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": []
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    12
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": [
+                    2,
+                    32
+                  ]
+                },
+                {
+                  "hour": 0,
+                  "minutes": []
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": [
+                    53
+                  ]
+                },
+                {
+                  "hour": 6,
+                  "minutes": [
+                    53
+                  ]
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    8,
+                    23,
+                    32,
+                    53
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    13,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    12,
+                    52
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": [
+                    7
+                  ]
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    12,
+                    52
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": []
+                },
+                {
+                  "hour": 0,
+                  "minutes": [
+                    17
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 110,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": []
+                },
+                {
+                  "hour": 7,
+                  "minutes": []
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": []
+                },
+                {
+                  "hour": 10,
+                  "minutes": []
+                },
+                {
+                  "hour": 11,
+                  "minutes": []
+                },
+                {
+                  "hour": 12,
+                  "minutes": []
+                },
+                {
+                  "hour": 13,
+                  "minutes": []
+                },
+                {
+                  "hour": 14,
+                  "minutes": []
+                },
+                {
+                  "hour": 15,
+                  "minutes": []
+                },
+                {
+                  "hour": 16,
+                  "minutes": []
+                },
+                {
+                  "hour": 17,
+                  "minutes": []
+                },
+                {
+                  "hour": 18,
+                  "minutes": []
+                },
+                {
+                  "hour": 19,
+                  "minutes": []
+                },
+                {
+                  "hour": 20,
+                  "minutes": []
+                },
+                {
+                  "hour": 21,
+                  "minutes": []
+                },
+                {
+                  "hour": 22,
+                  "minutes": []
+                },
+                {
+                  "hour": 23,
+                  "minutes": []
+                },
+                {
+                  "hour": 0,
+                  "minutes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "buses": [
+            {
+              "id": 6,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": []
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    36
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    56
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": []
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    17
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": []
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": []
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": []
+                },
+                {
+                  "hour": 16,
+                  "minutes": []
+                },
+                {
+                  "hour": 17,
+                  "minutes": []
+                },
+                {
+                  "hour": 18,
+                  "minutes": []
+                },
+                {
+                  "hour": 19,
+                  "minutes": []
+                },
+                {
+                  "hour": 20,
+                  "minutes": []
+                },
+                {
+                  "hour": 21,
+                  "minutes": []
+                },
+                {
+                  "hour": 22,
+                  "minutes": []
+                },
+                {
+                  "hour": 23,
+                  "minutes": []
+                },
+                {
+                  "hour": 0,
+                  "minutes": []
+                }
+              ]
+            },
+            {
+              "id": 7,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": []
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    2,
+                    22
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": []
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": []
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    32
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    12
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": [
+                    2,
+                    32
+                  ]
+                },
+                {
+                  "hour": 0,
+                  "minutes": []
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": [
+                    53
+                  ]
+                },
+                {
+                  "hour": 6,
+                  "minutes": [
+                    53
+                  ]
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    8,
+                    23,
+                    32,
+                    53
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    13,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    12,
+                    52
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": [
+                    7
+                  ]
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    12,
+                    52
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": []
+                },
+                {
+                  "hour": 0,
+                  "minutes": [
+                    17
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 110,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": []
+                },
+                {
+                  "hour": 7,
+                  "minutes": []
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": []
+                },
+                {
+                  "hour": 10,
+                  "minutes": []
+                },
+                {
+                  "hour": 11,
+                  "minutes": []
+                },
+                {
+                  "hour": 12,
+                  "minutes": []
+                },
+                {
+                  "hour": 13,
+                  "minutes": []
+                },
+                {
+                  "hour": 14,
+                  "minutes": []
+                },
+                {
+                  "hour": 15,
+                  "minutes": []
+                },
+                {
+                  "hour": 16,
+                  "minutes": []
+                },
+                {
+                  "hour": 17,
+                  "minutes": []
+                },
+                {
+                  "hour": 18,
+                  "minutes": []
+                },
+                {
+                  "hour": 19,
+                  "minutes": []
+                },
+                {
+                  "hour": 20,
+                  "minutes": []
+                },
+                {
+                  "hour": 21,
+                  "minutes": []
+                },
+                {
+                  "hour": 22,
+                  "minutes": []
+                },
+                {
+                  "hour": 23,
+                  "minutes": []
+                },
+                {
+                  "hour": 0,
+                  "minutes": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "name": "Банк \"Возрождение\" (на БВ)",
+      "days": [
+        {
+          "id": 0,
+          "buses": [
+            {
+              "id": 7,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": [
+                    12,
+                    42
+                  ]
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    2,
+                    22,
+                    42,
+                    57
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": [
+                    2,
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    2,
+                    22,
+                    42,
+                    52
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    12,
+                    32
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": [
+                    2,
+                    17,
+                    45
+                  ]
+                },
+                {
+                  "hour": 0,
+                  "minutes": [
+                    30
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": [
+                    33
+                  ]
+                },
+                {
+                  "hour": 6,
+                  "minutes": [
+                    33,
+                    48
+                  ]
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    3,
+                    12,
+                    33,
+                    52,
+                    53
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    2,
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    7,
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": [
+                    2,
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    12,
+                    17,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    12,
+                    22,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    12,
+                    32,
+                    42,
+                    52
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    12,
+                    32,
+                    47,
+                    52
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    2,
+                    32,
+                    47
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": [
+                    12,
+                    52
+                  ]
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    32
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": [
+                    57
+                  ]
+                },
+                {
+                  "hour": 0,
+                  "minutes": []
+                }
+              ]
+            },
+            {
+              "id": 17,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": []
+                },
+                {
+                  "hour": 7,
+                  "minutes": []
+                },
+                {
+                  "hour": 8,
+                  "minutes": []
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    16,
+                    56
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": []
+                },
+                {
+                  "hour": 11,
+                  "minutes": [
+                    41
+                  ]
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    26
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    11,
+                    56
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    41
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    31
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    26
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": []
+                },
+                {
+                  "hour": 18,
+                  "minutes": []
+                },
+                {
+                  "hour": 19,
+                  "minutes": []
+                },
+                {
+                  "hour": 20,
+                  "minutes": [
+                    11,
+                    36
+                  ]
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    36
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    7
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": []
+                },
+                {
+                  "hour": 0,
+                  "minutes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "buses": [
+            {
+              "id": 7,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": []
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": []
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    22,
+                    42
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": []
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    22,
+                    52
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": [
+                    12
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": [
+                    33
+                  ]
+                },
+                {
+                  "hour": 6,
+                  "minutes": [
+                    33,
+                    48
+                  ]
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    3,
+                    12,
+                    33,
+                    53
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    32,
+                    47
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": [
+                    52
+                  ]
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    32
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": [
+                    57
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 110,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": []
+                },
+                {
+                  "hour": 7,
+                  "minutes": []
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": []
+                },
+                {
+                  "hour": 10,
+                  "minutes": []
+                },
+                {
+                  "hour": 11,
+                  "minutes": []
+                },
+                {
+                  "hour": 12,
+                  "minutes": []
+                },
+                {
+                  "hour": 13,
+                  "minutes": []
+                },
+                {
+                  "hour": 14,
+                  "minutes": []
+                },
+                {
+                  "hour": 15,
+                  "minutes": []
+                },
+                {
+                  "hour": 16,
+                  "minutes": []
+                },
+                {
+                  "hour": 17,
+                  "minutes": []
+                },
+                {
+                  "hour": 18,
+                  "minutes": []
+                },
+                {
+                  "hour": 19,
+                  "minutes": []
+                },
+                {
+                  "hour": 20,
+                  "minutes": []
+                },
+                {
+                  "hour": 21,
+                  "minutes": []
+                },
+                {
+                  "hour": 22,
+                  "minutes": []
+                },
+                {
+                  "hour": 23,
+                  "minutes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "buses": [
+            {
+              "id": 7,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": []
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": []
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    2,
+                    42
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": []
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    12,
+                    52
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    42
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": [
+                    12
+                  ]
+                },
+                {
+                  "hour": 0,
+                  "minutes": [
+                    28
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": [
+                    33
+                  ]
+                },
+                {
+                  "hour": 6,
+                  "minutes": [
+                    33,
+                    48
+                  ]
+                },
+                {
+                  "hour": 7,
+                  "minutes": [
+                    3,
+                    12,
+                    33,
+                    53
+                  ]
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 10,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 11,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 12,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 13,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 14,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 15,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 16,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 17,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 18,
+                  "minutes": [
+                    12,
+                    32,
+                    52
+                  ]
+                },
+                {
+                  "hour": 19,
+                  "minutes": [
+                    32,
+                    47
+                  ]
+                },
+                {
+                  "hour": 20,
+                  "minutes": [
+                    52
+                  ]
+                },
+                {
+                  "hour": 21,
+                  "minutes": [
+                    32
+                  ]
+                },
+                {
+                  "hour": 22,
+                  "minutes": [
+                    22
+                  ]
+                },
+                {
+                  "hour": 23,
+                  "minutes": [
+                    57
+                  ]
+                },
+                {
+                  "hour": 0,
+                  "minutes": []
+                }
+              ]
+            },
+            {
+              "id": 110,
+              "hours": [
+                {
+                  "hour": 5,
+                  "minutes": []
+                },
+                {
+                  "hour": 6,
+                  "minutes": []
+                },
+                {
+                  "hour": 7,
+                  "minutes": []
+                },
+                {
+                  "hour": 8,
+                  "minutes": [
+                    2
+                  ]
+                },
+                {
+                  "hour": 9,
+                  "minutes": []
+                },
+                {
+                  "hour": 10,
+                  "minutes": []
+                },
+                {
+                  "hour": 11,
+                  "minutes": []
+                },
+                {
+                  "hour": 12,
+                  "minutes": []
+                },
+                {
+                  "hour": 13,
+                  "minutes": []
+                },
+                {
+                  "hour": 14,
+                  "minutes": []
+                },
+                {
+                  "hour": 15,
+                  "minutes": []
+                },
+                {
+                  "hour": 16,
+                  "minutes": []
+                },
+                {
+                  "hour": 17,
+                  "minutes": []
+                },
+                {
+                  "hour": 18,
+                  "minutes": []
+                },
+                {
+                  "hour": 19,
+                  "minutes": []
+                },
+                {
+                  "hour": 20,
+                  "minutes": []
+                },
+                {
+                  "hour": 21,
+                  "minutes": []
+                },
+                {
+                  "hour": 22,
+                  "minutes": []
+                },
+                {
+                  "hour": 23,
+                  "minutes": []
+                },
+                {
+                  "hour": 0,
+                  "minutes": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

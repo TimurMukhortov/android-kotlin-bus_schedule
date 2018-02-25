@@ -1,6 +1,5 @@
 package com.example.timurmuhortov.dubnabus.presentation.presenter.main
 
-import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
@@ -27,11 +26,11 @@ class MainPresenter @Inject constructor(
     }
 
     fun onMap(){
-        viewState.createAlertDialog("Ошибка:", "Раздел находится в разработке.")
+        viewState.createAlertDialog("Упс!", "Раздел находится в разработке. \n Подождите немного ;)")
     }
 
     fun onAbout(){
-        viewState.createAlertDialog("Ошибка:", "Раздел находится в разработке.")
+        viewState.createAlertDialog("Упс!", "Раздел находится в разработке. \n Подождите немного ;)")
     }
 
 }
