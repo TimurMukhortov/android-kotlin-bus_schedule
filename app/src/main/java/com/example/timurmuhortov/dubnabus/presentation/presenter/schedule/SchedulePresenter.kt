@@ -2,11 +2,14 @@ package com.example.timurmuhortov.dubnabus.presentation.presenter.schedule
 
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
+import com.example.timurmuhortov.dubnabus.R.string.map
+import com.example.timurmuhortov.dubnabus.data.entity.database.StopDB
 import com.example.timurmuhortov.dubnabus.data.entity.schedule.Schedule
 import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
 import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
 import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
+import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleDataBaseRepository
 import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleNetworkRepository
 import com.example.timurmuhortov.dubnabus.presentation.view.IScheduleView
 import com.example.timurmuhortov.dubnabus.util.retrofit.NetworkError
@@ -25,6 +28,7 @@ import javax.inject.Inject
 @InjectViewState
 class SchedulePresenter @Inject constructor(
         private val scheduleRepository: IScheduleNetworkRepository,
+        private val scheduleBDRepository: IScheduleDataBaseRepository,
         private val router: Router
 ) : MvpPresenter<IScheduleView>() {
 
@@ -36,23 +40,9 @@ class SchedulePresenter @Inject constructor(
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
-        scheduleRepository.loadSchedule()
-                .subscribe({ schedule ->
-                    scheduleList = schedule
-                    stopId = schedule.stops.first().id
-                    busId = 6
-                    viewState.showStopName(schedule.stops.map {
-                        StopViewData(
-                                it.id,
-                                it.name
-                        )
-                    })
-                    getSheduleForBus(busId)
-                }, {
-                    (it as? NetworkError)?.let {
-                        viewState.showAlertDialog("Ошибка", it.code.toString() + " : " + it.message)
-                    }
-                })
+        viewState.showStopName(scheduleBDRepository.getStops().map {
+            StopDB(it.id, it.name)
+        })
 
     }
 

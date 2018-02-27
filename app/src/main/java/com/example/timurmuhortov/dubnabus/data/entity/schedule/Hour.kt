@@ -14,5 +14,6 @@ data class Hour(
         @SerializedName("hour")
         val hour: Int,
         @SerializedName("minutes")
-        var minutes: List<Int>
+        var minutes: List<Int>,
+        val id_bus: Int? = 0
 )
