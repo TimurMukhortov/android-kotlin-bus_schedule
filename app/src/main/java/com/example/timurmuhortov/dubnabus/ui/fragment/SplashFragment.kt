@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import butterknife.ButterKnife
-import butterknife.Unbinder
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.timurmuhortov.dubnabus.R
@@ -34,17 +32,9 @@ class SplashFragment : BaseFragment(), ISplashView {
     @ProvidePresenter
     fun providePresenter() = presenter
 
-    private lateinit var unbinder: Unbinder
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
             inflater.inflate(R.layout.fragment_splash, container, false)
-                    .also {
-                        unbinder = ButterKnife.bind(this@SplashFragment, it)
-                    }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        unbinder.unbind()
-    }
+
 
 }
