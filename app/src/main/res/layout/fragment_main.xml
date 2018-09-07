@@ -10,84 +10,57 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
+        android:src="@drawable/mainscreen_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mainscreen_background" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <include
-        layout="@layout/partial_toolbar"
-    />
+        android:id="@+id/include"
+        layout="@layout/partial_toolbar" />
 
 
-    <Button
+    <ImageButton
         android:id="@+id/button_schedule"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="16dp"
-
-        android:layout_marginTop="8dp"
-        android:background="@drawable/button_sch"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_down_border_for_buttons"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_central_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/button_sch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_map"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline_up_border_for_buttons" />
+        app:layout_constraintTop_toBottomOf="@+id/include" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button_map"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/button_map"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_down_border_for_buttons"
+        android:background="@color/colorTransparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/button_map"
+        app:layout_constraintBottom_toBottomOf="@+id/button_schedule"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/guideline_central_divider"
-        app:layout_constraintTop_toTopOf="@+id/guideline_up_border_for_buttons" />
+        app:layout_constraintStart_toEndOf="@+id/button_schedule"
+        app:layout_constraintTop_toTopOf="@+id/button_schedule" />
 
     <Button
         android:id="@+id/button_about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@android:color/transparent"
         android:gravity="center"
         android:text="@string/about"
-        android:textColor="@color/colorWhite"
         android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_up_border_for_buttons"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.43" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_down_border_for_buttons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_central_divider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
 
 </android.support.constraint.ConstraintLayout>
