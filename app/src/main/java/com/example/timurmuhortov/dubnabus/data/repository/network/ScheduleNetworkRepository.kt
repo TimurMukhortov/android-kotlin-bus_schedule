@@ -1,11 +1,7 @@
 package com.example.timurmuhortov.dubnabus.data.repository.network
 
-import com.example.timurmuhortov.dubnabus.data.entity.Bus
-import com.example.timurmuhortov.dubnabus.data.entity.Stop
-import com.example.timurmuhortov.dubnabus.data.entity.Time
 import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleNetworkRepository
 import com.example.timurmuhortov.dubnabus.domain.network.ScheduleAPI
-import com.example.timurmuhortov.dubnabus.util.reader.IFileReader
 import com.example.timurmuhortov.dubnabus.util.retrofit.INetworkErrorMapper
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers

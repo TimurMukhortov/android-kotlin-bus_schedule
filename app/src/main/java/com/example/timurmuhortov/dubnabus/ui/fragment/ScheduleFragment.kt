@@ -16,6 +16,7 @@ import butterknife.Unbinder
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.timurmuhortov.dubnabus.R
+import com.example.timurmuhortov.dubnabus.data.entity.database.StopDB
 import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
 import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
 import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
@@ -131,7 +132,7 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
         adapterSchedule.schedules = times
     }
 
-    override fun showStopName(stops: List<StopViewData>) {
+    override fun showStopName(stops: List<StopDB>) {
         adapterStop.setStops(stops)
         spinnerStop.setAdapter(ArrayAdapter(this.context, android.R.layout.simple_spinner_item, stops))
         spinnerDay.setAdapter(ArrayAdapter(this.context, android.R.layout.simple_spinner_item, adapterDay.getDays()))

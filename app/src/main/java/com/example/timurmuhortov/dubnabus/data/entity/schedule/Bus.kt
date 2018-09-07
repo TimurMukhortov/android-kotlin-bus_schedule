@@ -1,4 +1,4 @@
-package com.example.timurmuhortov.dubnabus.data.entity
+package com.example.timurmuhortov.dubnabus.data.entity.schedule
 
 import com.google.gson.annotations.SerializedName
 
@@ -14,7 +14,9 @@ data class Bus(
         @SerializedName("id")
         val id: Int,
         @SerializedName("hours")
-        val hours: List<Hour>
+        val hours: List<Hour>,
+        val id_bus: Int? = 0,
+        val id_day: Int? = 0
 ) {
     override fun toString(): String = "№ " + id.toString()
 }
