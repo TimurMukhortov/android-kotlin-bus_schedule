@@ -107,7 +107,7 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
                             override fun onNothingSelected(parent: AdapterView<*>) {}
                         })
 
-                        spinnerBus.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener{
+                        spinnerBus.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
                             override fun onNothingSelected(parent: AdapterView<*>?) {
 
                             }
@@ -144,10 +144,10 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
     }
 
     override fun showAlertDialog(title: String, message: String) = AlertDialog.Builder(context)
-                .setTitle(title)
-                .setMessage(message)
-                .setPositiveButton("OK", {button,_ -> button.dismiss() })
-                .create()
-                .show()
+            .setTitle(title)
+            .setMessage(message)
+            .setPositiveButton("OK") { button, _ -> button.dismiss() }
+            .create()
+            .show()
 
 }
