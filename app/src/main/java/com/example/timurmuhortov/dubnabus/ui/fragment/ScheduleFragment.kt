@@ -19,7 +19,6 @@ import com.example.timurmuhortov.dubnabus.R
 import com.example.timurmuhortov.dubnabus.data.entity.database.StopDB
 import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
 import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
-import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
 import com.example.timurmuhortov.dubnabus.extension.prepareToolbar
 import com.example.timurmuhortov.dubnabus.extension.setCenterTitle
 import com.example.timurmuhortov.dubnabus.presentation.presenter.schedule.SchedulePresenter
@@ -68,13 +67,13 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
     @BindView(R.id.toolbar)
     protected lateinit var toolbar: Toolbar
 
-    @BindView(R.id.spinner_nameStop)
+    @BindView(R.id.spinner_schedule_station)
     protected lateinit var spinnerStop: NiceSpinner
 
-    @BindView(R.id.spinner_nameBus)
+    @BindView(R.id.spinner_schedule_number_bus)
     protected lateinit var spinnerBus: NiceSpinner
 
-    @BindView(R.id.spinner_dayOfWeek)
+    @BindView(R.id.spinner_schedule_day_of_week)
     protected lateinit var spinnerDay: NiceSpinner
 
     @BindView(R.id.recyclerView_schedule)

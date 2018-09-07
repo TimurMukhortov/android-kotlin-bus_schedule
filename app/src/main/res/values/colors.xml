@@ -4,16 +4,16 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorDarkOrange">#a35b1a</color>
-    <color name="colorOrange">#e2761c</color>
+    <color name="colorOrange">#E56B1F</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorTransparent">#10000000</color>
-    <color name="colorGray">#333333</color>
-    <color name="colorLightGray">#3b3b3b</color>
 
     <!--Black-->
     <color name="colorBlack_60per">#99000000</color>
     <color name="colorBlack_40per">#64000000</color>
 
-    <!--ScheduleScreen-->
-    <color name="ScheduleScreen.ArrivalTime.colorGray">#bababa</color>
+    <!--Gray-->
+    <color name="colorGray">#bababa</color>
+    <color name="colorLightGray">#3b3b3b</color>
+    <color name="colorDarkGray">#333333</color>
 </resources>

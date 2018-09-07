@@ -56,10 +56,6 @@ dependencies {
     implementation "com.arello-mobile:moxy-app-compat:${rootProject.ext.moxy}"
     kapt "com.arello-mobile:moxy-compiler:${rootProject.ext.moxy}"
 
-    //ButterKnife
-    implementation "com.jakewharton:butterknife:${rootProject.ext.butterKnife}"
-    kapt "com.jakewharton:butterknife-compiler:${rootProject.ext.butterKnife}"
-
     //Cicerone
     implementation "ru.terrakok.cicerone:cicerone:${rootProject.ext.cicerone}"
 
