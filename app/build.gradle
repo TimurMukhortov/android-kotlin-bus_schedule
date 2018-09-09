@@ -60,7 +60,7 @@ dependencies {
     implementation "ru.terrakok.cicerone:cicerone:${rootProject.ext.cicerone}"
 
     //Realm
-    implementation "io.realm:android-adapters:2.1.1"
+    implementation "io.realm:android-adapters:${rootProject.ext.realmAdapter}"
 
     //RxJava2
     implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxJava}"
