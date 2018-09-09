@@ -118,7 +118,7 @@ class ScheduleFragment : BaseFragment(), IScheduleView {
     override fun showAlertDialog(title: String, message: String) = AlertDialog.Builder(context)
             .setTitle(title)
             .setMessage(message)
-            .setPositiveButton("OK") { button, _ -> button.dismiss() }
+            .setPositiveButton(getString(R.string.ok)) { button, _ -> button.dismiss() }
             .create()
             .show()
 

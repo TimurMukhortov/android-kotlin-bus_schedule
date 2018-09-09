@@ -9,4 +9,5 @@
     <string name="station">Остановка</string>
     <string name="number_bus">Автобус</string>
     <string name="day_of_week">Дни недели</string>
+    <string name="ok">OK</string>
 </resources>

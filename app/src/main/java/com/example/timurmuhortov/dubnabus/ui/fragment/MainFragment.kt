@@ -55,7 +55,7 @@ class MainFragment : BaseFragment(), IMainView {
     override fun createAlertDialog(title: String, msg: String) = AlertDialog.Builder(context)
             .setTitle(title)
             .setMessage(msg)
-            .setPositiveButton("OK") { button, _ -> button.dismiss() }
+            .setPositiveButton(getString(R.string.ok)) { button, _ -> button.dismiss() }
             .create()
             .show()
 
