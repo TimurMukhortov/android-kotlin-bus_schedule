@@ -1,5 +1,6 @@
 package com.example.timurmuhortov.dubnabus.util.adapter
 
+import com.example.timurmuhortov.dubnabus.data.entity.database.StopDB
 import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
 import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
 import javax.inject.Inject
@@ -14,7 +15,7 @@ import javax.inject.Inject
 @FragmentScope
 class StopAdapter @Inject constructor() {
 
-    private var stops: List<StopViewData>? = null
+    private var stops: List<StopDB>? = null
 
     /*
     *
@@ -23,7 +24,7 @@ class StopAdapter @Inject constructor() {
     * Параметры List<StopViewData> - лист с остановками
     *
      */
-    fun setStops(stops: List<StopViewData>) {
+    fun setStops(stops: List<StopDB>) {
         this.stops = stops
     }
 
@@ -40,6 +41,6 @@ class StopAdapter @Inject constructor() {
     * Описание: Возвращает имя остановки по позиции
     *
      */
-    fun getStopId(position: Int) = stops?.get(position)?.id
+    fun getStopId(position: Int) = stops?.get(position)?.id ?: 0
 
 }
