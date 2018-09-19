@@ -17,7 +17,7 @@ import javax.inject.Singleton
 
 
 @Module
-class RealmModule(context: Context) {
+class RealmModule {
 
     private companion object {
         const val DB_NAME = "DubnaBus"
