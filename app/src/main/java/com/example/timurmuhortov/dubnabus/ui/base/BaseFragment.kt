@@ -3,7 +3,6 @@ package com.example.timurmuhortov.dubnabus.ui.base
 import android.app.Activity
 import android.content.Context
 import android.os.Build
-import android.support.v4.app.Fragment
 import com.arellomobile.mvp.MvpAppCompatFragment
 import dagger.android.support.AndroidSupportInjection
 

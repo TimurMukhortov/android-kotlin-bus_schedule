@@ -3,10 +3,6 @@ package com.example.timurmuhortov.dubnabus.presentation.view
 import com.arellomobile.mvp.MvpView
 import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
-import com.example.timurmuhortov.dubnabus.data.entity.database.StopDB
-import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
-import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
-import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
 
 /**
  * @author: timur.mukhortov
@@ -18,12 +14,5 @@ import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface IScheduleView : MvpView {
 
-    fun showHours(times: List<HourViewData>)
-
-    fun showStopName(stops: List<StopDB>)
-
-    fun showBusName(buses: List<BusViewData>)
-
     fun showAlertDialog(title: String, message: String)
-
 }

@@ -2,17 +2,9 @@ package com.example.timurmuhortov.dubnabus.presentation.presenter.schedule
 
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
-import com.example.timurmuhortov.dubnabus.R.string.map
-import com.example.timurmuhortov.dubnabus.data.entity.database.StopDB
-import com.example.timurmuhortov.dubnabus.data.entity.schedule.Schedule
-import com.example.timurmuhortov.dubnabus.data.ui.BusViewData
-import com.example.timurmuhortov.dubnabus.data.ui.HourViewData
-import com.example.timurmuhortov.dubnabus.data.ui.StopViewData
-import com.example.timurmuhortov.dubnabus.di.scope.FragmentScope
-import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleDataBaseRepository
-import com.example.timurmuhortov.dubnabus.domain.irepository.IScheduleNetworkRepository
+import com.example.timurmuhortov.dubnabus.engine.di.scope.FragmentScope
+import com.example.timurmuhortov.dubnabus.engine.domain.irepository.IScheduleDataBaseRepository
 import com.example.timurmuhortov.dubnabus.presentation.view.IScheduleView
-import com.example.timurmuhortov.dubnabus.util.retrofit.NetworkError
 import ru.terrakok.cicerone.Router
 import javax.inject.Inject
 
@@ -27,84 +19,18 @@ import javax.inject.Inject
 @FragmentScope
 @InjectViewState
 class SchedulePresenter @Inject constructor(
-        private val scheduleRepository: IScheduleNetworkRepository,
-        private val scheduleBDRepository: IScheduleDataBaseRepository,
+        private val dataBaseRepository: IScheduleDataBaseRepository,
         private val router: Router
 ) : MvpPresenter<IScheduleView>() {
 
-    private var scheduleList: Schedule? = null
-
-    private var stopId: Int = 0
-    private var busId: Int = 0
-    private var dayId: Int = 0
-
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
-        viewState.showStopName(scheduleBDRepository.getStops().map {
-            StopDB(it.id, it.name)
-        })
-
+        val station = dataBaseRepository
+                .getStations()
+        val s =""
     }
 
-    fun onBack() {
+    fun onBack(){
         router.exit()
     }
-
-    fun getBusesForStop(stopId: Int) {
-        this.stopId = stopId
-        scheduleList?.stops?.forEach { stop ->
-            if (stopId == stop.id) {
-                stop.days.forEach { day ->
-                    viewState.showBusName(
-                            day.buses.map {
-                                BusViewData(
-                                        it.id
-                                )
-                            })
-                }
-            }
-        }
-    }
-
-    fun getBusesForStopByDay(dayId: Int) {
-        this.dayId = dayId
-        scheduleList?.stops?.forEach { stop ->
-            if (stopId == stop.id) {
-                stop.days.forEach { day ->
-                    if (day.id == dayId) {
-                        viewState.showBusName(
-                                day.buses.map {
-                                    BusViewData(
-                                            it.id
-                                    )
-                                }
-                        )
-                    }
-                }
-            }
-        }
-    }
-
-    fun getSheduleForBus(id: Int) = scheduleList?.stops?.forEach { stop ->
-        if(stopId == stop.id) {
-            stop.days.forEach { day ->
-                if (dayId == day.id) {
-                    day.buses.forEach { bus ->
-                        if (id == bus.id) {
-                            viewState.showHours(
-                                    bus.hours.map {
-                                        HourViewData(
-                                                it.hour,
-                                                it.minutes
-                                        )
-                                    }
-                            )
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
 }

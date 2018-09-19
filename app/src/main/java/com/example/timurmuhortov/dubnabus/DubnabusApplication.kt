@@ -2,7 +2,7 @@ package com.example.timurmuhortov.dubnabus
 
 import android.app.Activity
 import android.app.Application
-import com.example.timurmuhortov.dubnabus.di.component.DaggerAppComponent
+import com.example.timurmuhortov.dubnabus.engine.di.component.DaggerAppComponent
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject

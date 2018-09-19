@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.timurmuhortov.dubnabus.R
-import com.example.timurmuhortov.dubnabus.extension.setCenterTitle
+import com.example.timurmuhortov.dubnabus.engine.extension.setCenterTitle
 import com.example.timurmuhortov.dubnabus.presentation.presenter.main.MainPresenter
 import com.example.timurmuhortov.dubnabus.presentation.view.IMainView
 import com.example.timurmuhortov.dubnabus.ui.base.BaseFragment
@@ -24,7 +24,7 @@ import javax.inject.Inject
  **/
 
 
-class MainFragment : BaseFragment(), IMainView {
+class MainFragment : BaseFragment(), IMainView, View.OnClickListener {
 
     companion object {
         fun newInstance() = MainFragment()
@@ -39,18 +39,6 @@ class MainFragment : BaseFragment(), IMainView {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
             inflater.inflate(R.layout.fragment_main, container, false)
-                    .also {
-                        toolbar.setCenterTitle("РАСПИСАНИЕ АВТОБУСОВ \n г. Дубна")
-                        button_schedule.setOnClickListener {
-                            presenter.onSchedule()
-                        }
-                        button_map.setOnClickListener {
-                            presenter.onMap()
-                        }
-                        button_about.setOnClickListener {
-                            presenter.onAbout()
-                        }
-                    }
 
     override fun createAlertDialog(title: String, msg: String) = AlertDialog.Builder(context)
             .setTitle(title)
@@ -58,5 +46,19 @@ class MainFragment : BaseFragment(), IMainView {
             .setPositiveButton(getString(R.string.ok)) { button, _ -> button.dismiss() }
             .create()
             .show()
+
+    override fun onClick(v: View?) {
+        when (v) {
+            button_schedule -> {
+                presenter.onSchedule()
+            }
+            button_map -> {
+                presenter.onMap()
+            }
+            button_about -> {
+                presenter.onAbout()
+            }
+        }
+    }
 
 }
